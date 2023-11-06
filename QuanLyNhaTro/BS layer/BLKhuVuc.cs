@@ -21,7 +21,7 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayKhuVuc()
         {
-            return db.ExecuteQueryDataSet("SELECT MaKhuVuc, TenKhuVuc FROM KhuVuc", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT * FROM ViewKhuTro ", CommandType.Text);
         }
 
         public bool ThemKhuVuc(string MaKV, string TenKhuVuc)
@@ -29,5 +29,7 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "insert into KhuVuc (MaKhuVuc, TenKhuVuc) values(" + "'" + MaKV + "',N'" + TenKhuVuc + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
+
     }
 }

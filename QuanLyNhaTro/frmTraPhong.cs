@@ -152,6 +152,11 @@ namespace QuanLyNhaTro
                 lvKhach.Items.Clear();
             }
 
-        }    
+        }
+
+        private void lvKhach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

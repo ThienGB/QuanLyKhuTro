@@ -22,8 +22,13 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet("select * from ViewHopDong ", CommandType.Text);
 
         }
+        public DataTable LayHopDong_MaKV(string makv)
+        {
 
-       
+            return db.ExecuteQueryDataSet("select * from LocPhongTheoKhuVuc('"+ makv+ "') ", CommandType.Text);
+
+        }
+
     }
 }
 

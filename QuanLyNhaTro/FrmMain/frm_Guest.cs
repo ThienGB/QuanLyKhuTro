@@ -276,6 +276,12 @@ namespace QuanLyNhaTro.FrmMain
             form.ShowDialog();
         }
 
+        private void buttonItem5_Click(object sender, EventArgs e)
+        {
+            frmHopDong form= new frmHopDong();
+            addNewTab("Hợp đồng", form, 12);
+        }
+
         private void buttonX1_Click(object sender, EventArgs e)
         {
             AccountInformation accountInformation = new AccountInformation(userName,PASS);

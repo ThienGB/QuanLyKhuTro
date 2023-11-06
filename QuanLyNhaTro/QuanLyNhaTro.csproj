@@ -94,6 +94,7 @@
     </Compile>
     <Compile Include="BS layer\BLDangNhap.cs" />
     <Compile Include="BS layer\BLDichVu.cs" />
+    <Compile Include="BS layer\BLHopDong.cs" />
     <Compile Include="BS layer\BLKhuVuc.cs" />
     <Compile Include="BS layer\BLLoaiPhong.cs" />
     <Compile Include="BS layer\BLPhieuThu.cs" />
@@ -131,6 +132,12 @@
     </Compile>
     <Compile Include="frmHopDong.designer.cs">
       <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuDungDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSuDungDichVu.designer.cs">
+      <DependentUpon>frmSuDungDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DangKyPhong.cs">
       <SubType>Form</SubType>
@@ -280,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuDungDichVu.resx">
+      <DependentUpon>frmSuDungDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangKyPhong.resx">
       <DependentUpon>frm_DangKyPhong.cs</DependentUpon>

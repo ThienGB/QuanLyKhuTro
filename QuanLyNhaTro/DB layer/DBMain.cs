@@ -12,7 +12,7 @@ namespace QuanLyNhaTro.DB_layer
 {
     class DBMain
     {
-        string ConnStr = "Data Source=DESKTOP-GN3KLHT\\PHUONGMOC;Initial Catalog=QLNT;Integrated Security=True";
+        string ConnStr = "Data Source=DESKTOP-GN3KLHT\\PHUONGMOC;Initial Catalog=QLKhuTro;Integrated Security=True";
         public SqlConnection conn = null;
         public SqlCommand comm = null;
         public SqlDataAdapter da = null;

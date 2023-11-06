@@ -119,5 +119,13 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "DELETE FROM ThongTinKhach WHERE MaPhong = '" + maPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
+        public DataTable LayThongTinKhach_DungMaKT(string maKT)
+        {
+            string sqlString = "SELECT * FROM LocKhachThueTheoMaKT ('" + maKT + "')";
+
+
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
     }
 }
