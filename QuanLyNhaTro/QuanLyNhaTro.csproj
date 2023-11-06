@@ -126,6 +126,12 @@
     <Compile Include="FrmMain\frm_Guest.Designer.cs">
       <DependentUpon>frm_Guest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmHopDong.designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain\frm_Guest.resx">
       <DependentUpon>frm_Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangKyPhong.resx">
       <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
