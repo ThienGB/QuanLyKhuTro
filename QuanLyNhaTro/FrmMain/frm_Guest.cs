@@ -101,8 +101,7 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-            DoanhThu dt = new DoanhThu();
-            addNewTab("Doanh thu", dt, 11);
+
         }
 
         private void btnDsNgThue_Click(object sender, EventArgs e)
@@ -158,8 +157,7 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnThemKV_Click(object sender, EventArgs e)
         {
-            ThemKV thKV = new ThemKV();
-            addNewTab("Thêm khu vực", thKV, 9);
+
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
@@ -203,7 +201,17 @@ namespace QuanLyNhaTro.FrmMain
             this.Close();
         }
 
- 
+        private void buttonItem7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonItem6_Click(object sender, EventArgs e)
+        {
+            string maPhong = bLPhong.LayMaPhongBangMaKT(MaKT);
+            ThongTinPhongMinh ttpm = new ThongTinPhongMinh(maPhong);
+            addNewTab("Thông tin phòng", ttpm, 2);
+        }
 
         private void buttonX1_Click(object sender, EventArgs e)
         {

@@ -105,7 +105,7 @@ namespace QuanLyNhaTro
             listKhach.Items.Clear();
             TreeNode theNode = this.treeView2.SelectedNode;
             string dkphong = theNode.Name.ToString();
-            var ttp = bLPhong.LayPhong_MaP(  dkphong );
+            var ttp = bLPhong.LayPhong_MaP1(  dkphong );
             if (theNode.Tag.ToString() == "2")
             {
                 lbMaphong.Text = dkphong;

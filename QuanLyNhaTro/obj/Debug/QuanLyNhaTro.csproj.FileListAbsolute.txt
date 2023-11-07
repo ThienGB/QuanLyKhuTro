@@ -1085,7 +1085,6 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_XemTienPhong.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLKhachThue.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLPhongTro.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThu.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.ChoThue.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.Dsthutien.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Guest.resources
@@ -1098,7 +1097,6 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Properties.Resources.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLDichVu.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLLoaiPhong.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemKV.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemNguoi.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemPhong.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemTK.resources
@@ -1116,3 +1114,7 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DichVuGuest.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TaoPhieuChi.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_DangKyPhong.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuNam.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuThang.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.KhuVuc.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThongTinPhongMinh.resources

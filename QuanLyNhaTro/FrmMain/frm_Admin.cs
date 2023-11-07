@@ -135,14 +135,13 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-            DoanhThu dt = new DoanhThu();
-            addNewTab("Doanh thu", dt, 11);
+
         }
 
         private void btnDsNgThue_Click(object sender, EventArgs e)
         {
-            frm_TKNgThue dsnt= new frm_TKNgThue();
-            dsnt.Show();
+            DoanhThuThang dtt = new DoanhThuThang();
+            addNewTab("Doanh thu tháng", dtt, 11);
         }
 
         private void btnTrangThai_Click(object sender, EventArgs e)
@@ -194,8 +193,8 @@ namespace QuanLyNhaTro.FrmMain
         {
             //Load ComboBox Khu Vuc
             BLKhuVuc bLKhuVuc = new BLKhuVuc();
-            cbKV.DisplayMember = "TenKhuVuc";
-            cbKV.ValueMember = "MaKhuVuc";
+            cbKV.DisplayMember = "TenKhuTro";
+            cbKV.ValueMember = "MaKhuTro";
             cbKV.DataSource = bLKhuVuc.LayKhuVuc();
         }
 
@@ -207,8 +206,7 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnThemKV_Click(object sender, EventArgs e)
         {
-            ThemKV thKV = new ThemKV();
-            addNewTab("Thêm khu vực", thKV, 9);
+
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
@@ -269,6 +267,18 @@ namespace QuanLyNhaTro.FrmMain
         {
             TaoPhieuChi taophieuchi = new TaoPhieuChi();
             addNewTab("Tạo phiếu chi", taophieuchi, 14);
+        }
+
+        private void buttonItem9_Click(object sender, EventArgs e)
+        {
+            KhuVuc kv = new KhuVuc();
+            addNewTab("Khu vực", kv, 14);
+        }
+
+        private void btn_DsPhong_Click(object sender, EventArgs e)
+        {
+            DoanhThuNam dtn = new DoanhThuNam();
+            addNewTab("Doanh thu tháng", dtn, 11);
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

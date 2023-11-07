@@ -25,10 +25,10 @@ namespace QuanLyNhaTro
 
         private void btn_guest_Click(object sender, EventArgs e)
         {
-            /*this.Hide();
-            frmDangKyPhong frm_guest = new frmDangKyPhong();
+            this.Hide();
+            frm_DangKyPhong frm_guest = new frm_DangKyPhong();
             frm_guest.ShowDialog();
-            this.Show();*/
+            this.Show();
 
         }
 

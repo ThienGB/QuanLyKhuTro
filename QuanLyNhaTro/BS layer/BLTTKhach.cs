@@ -157,5 +157,10 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("SELECT * FROM KHACH_THUE WHERE MaKT = '" + id + "'", CommandType.Text);
         }
+        public DataTable ThongTinPhongMinh(string MaPhong)
+        {
+            string sqlString = "SELECT * FROM HienThiPhong_TheoPhong(" + MaPhong + ");";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+        }
     }
 }

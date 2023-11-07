@@ -1,5 +1,6 @@
 ﻿using QuanLyNhaTro.BS_layer;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace QuanLyNhaTro
         BLTTKhach dbKhach = new BLTTKhach();
         BLTTThuePhong dbThuePhong = new BLTTThuePhong();
         BLKhuVuc dbKhuVuc = new BLKhuVuc();
+        BLPhieuChi dbPhieuChi= new BLPhieuChi();
 
 
         public frmTraPhong()
@@ -26,10 +28,9 @@ namespace QuanLyNhaTro
 
         private void Load_CBKV()
         {
-            var kv = dbKhuVuc.LayKhuVuc();
-            cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DisplayMember = "TenKhuVuc";
-            cbKhuVuc.DataSource = kv;
+            cbKhuVuc.ValueMember = "MaKhuTro";
+            cbKhuVuc.DisplayMember = "TenKhuTro";
+            cbKhuVuc.DataSource = dbKhuVuc.LayKhuVuc();
         }
 
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,9 +45,7 @@ namespace QuanLyNhaTro
             {
                 ListViewItem item = new ListViewItem(row["MaPhong"].ToString()); // Giả sử cột "MaPhong" trong DataTable
                 item.SubItems.Add(row["TenPhong"].ToString()); // Giả sử cột "TenPhong" trong DataTable
-                item.SubItems.Add(row["MaLoaiPhong"].ToString()); // Giả sử cột "MaLoaiPhong" trong DataTable
-                item.SubItems.Add(row["Day"].ToString()); // Giả sử cột "Day" trong DataTable
-
+                item.SubItems.Add(row["MaLP"].ToString()); // Giả sử cột "MaLoaiPhong" trong DataTable
                 listView.Items.Add(item); // Thêm mục vào ListView
             }
         }
@@ -54,8 +53,7 @@ namespace QuanLyNhaTro
         private void LoadListPhong()
         {
             lvKhach.Items.Clear();
-            string makv = cbKhuVuc.SelectedValue.ToString();
-            
+            string makv = cbKhuVuc.SelectedValue.ToString();            
             var data = dbPhong.LayPhongDaThue_MaKV(makv);
             HienThiDuLieuLenListView(data, lvPhong);
         }
@@ -82,24 +80,23 @@ namespace QuanLyNhaTro
         private void LoadKhachDau(string id)
         {
             var data = dbKhach.LayThongTinKhachQuaID(id);
-            txtHo.Text = data.Rows[0][1].ToString();
             txtTen.Text = data.Rows[0][2].ToString();
-            dtpNgaySinh.Text = data.Rows[0][5].ToString();
+            dtpNgaySinh.Text = data.Rows[0][7].ToString();
             cbGioiTinh.Text = data.Rows[0][3].ToString();
             txtCMND.Text = data.Rows[0][6].ToString();
-            txtQueQuan.Text = data.Rows[0][7].ToString();
-            txtNgheNghiep.Text = data.Rows[0][8].ToString();
+            txtQueQuan.Text = data.Rows[0][5].ToString();
+            txtNgheNghiep.Text = data.Rows[0][4].ToString();
             lblMaKhach.Text = data.Rows[0][0].ToString();
 
             var dataThuePhong = dbThuePhong.LayThongTinThue();
             lblMaHopDong.Text = dataThuePhong.Rows[0][0].ToString();
-            txtMaPhong.Text = dataThuePhong.Rows[0][2].ToString();
-            dtpNgayThue.Text = dataThuePhong.Rows[0][3].ToString();
+            txtMaPhong.Text = dataThuePhong.Rows[0][1].ToString();
+            dtpNgayThue.Text = dataThuePhong.Rows[0][4].ToString();
             int result = 0;
-            bool isSuccess = int.TryParse(dataThuePhong.Rows[0][4].ToString(), out result);
+            bool isSuccess = int.TryParse(dataThuePhong.Rows[0][3].ToString(), out result);
             if (isSuccess)
             {
-                tiendatcoc = Convert.ToInt32(dataThuePhong.Rows[0][4].ToString());
+                tiendatcoc = Convert.ToInt32(dataThuePhong.Rows[0][3].ToString());
             }
             else
             {
@@ -138,20 +135,27 @@ namespace QuanLyNhaTro
             ngaytra = dtpNgayTra.Value;
             string maKhach = lblMaKhach.Text;
             string str_tdc = string.Format("{0:#,##0}", tiendatcoc);
+            int tdc = int.Parse(txtTienCoc.Text);
 
             if (MessageBox.Show("Ngày thuê: " + dtpNgayThue.Text.ToString() + "\nTiền đặt cọc: " + str_tdc + " vnd", "Xác nhận trả phòng: " + maphong, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                bool a= dbThuePhong.TraPhong(maphong);
-                bool b= dbPhong.UpdateTrangThai(maphong,"Trống");
-                bool c = dbKhach.TraPhong(maphong);
-                
+                dbThuePhong.TraPhong(maphong);
+                dbPhong.UpdateTrangThai(maphong,"Trống");
+                dbKhach.TraPhong(maphong);
 
+                dbPhieuChi.InsertPhieuChi(ngaytra, tdc,"");
                 //Refresh
                 LoadListPhong();
                 ClearAll();
                 lvKhach.Items.Clear();
             }
 
-        }    
+        }
+
+        private void lvPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

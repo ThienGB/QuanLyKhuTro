@@ -166,6 +166,14 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
 
         }
+        public DataTable LayPhong_MaP1(string maphong)
+        {
+            string sql = "SELECT TenPhong, TenLoaiPhong, DienTich, GiaThue, DiaChi " +
+                         "FROM LayThongTinPhong" +
+                         "('" + maphong + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
         public DataTable LayPhongtrong(string makv)
         {
             string sql = "SELECT * from LocPhongTheoKhuTro('" + makv + "')";
