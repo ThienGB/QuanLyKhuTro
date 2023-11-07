@@ -15,7 +15,8 @@ namespace QuanLyNhaTro.FrmMain
 {
     public partial class frm_Guest : Form
     {
-        string userName,PASS;
+        string userName,MaKT;
+        BLPhong bLPhong = new BLPhong();
         public frm_Guest()
         {
             InitializeComponent();
@@ -23,50 +24,15 @@ namespace QuanLyNhaTro.FrmMain
         public frm_Guest(string username,string pass ):this()
         {
             userName = username;
-            PASS = pass;
+            MaKT = pass;
         }
-        private void TabTrangThai()
-        {
-            //Khoi tao 
-            TrangThai ucTrangThai = new TrangThai();
-            TabControlPanel newTabPanel = new DevComponents.DotNetBar.TabControlPanel();
-            TabItem newTabPage = new TabItem(this.components);
-            newTabPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            newTabPanel.Location = new System.Drawing.Point(0, 26);
-            newTabPanel.Name = "panel TrangThaiThue";
-            newTabPanel.Padding = new System.Windows.Forms.Padding(1);
-            newTabPanel.Size = new System.Drawing.Size(1230, 384);
-            newTabPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(178)))), ((int)(((byte)(222)))));
-            newTabPanel.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(192)))), ((int)(((byte)(222)))));
-            newTabPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            newTabPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            newTabPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            newTabPanel.Style.GradientAngle = 90;
-            newTabPanel.TabIndex = 2;
-            newTabPanel.TabItem = newTabPage;
-            //-------------Them tab page---------------------
-            Random ran = new Random();
-            newTabPage.Name = "TrangThaiThue" + ran.Next(100000) + ran.Next(22342);
-            newTabPage.AttachedControl = newTabPanel;
-            newTabPage.Text = "Trạng thái thuê";
-            ucTrangThai.Dock = DockStyle.Fill;
-            newTabPanel.Controls.Add(ucTrangThai);
 
-            //------------Them Tab page vao Tab control-------------
-            tabMain.Controls.Add(newTabPanel);
-            tabMain.Tabs.Add(newTabPage);
-            tabMain.SelectedTab = newTabPage;
-            newTabPage.ImageIndex = 6;
-            newTabPage.CloseButtonVisible = false;
-
-        }
 
         private void frm_Admin_Load(object sender, EventArgs e)
         {
             labelX2.Text = "Xin chào "+ userName;
-            TabTrangThai();
-            Load_CB_KV();
+            string MaPhong = bLPhong.LayMaPhongBangMaKT(MaKT);
+            numRent.Text = MaPhong;
             this.FormBorderStyle = FormBorderStyle.Sizable;
 
         }
@@ -143,12 +109,13 @@ namespace QuanLyNhaTro.FrmMain
         {
             frm_TKNgThue dsnt= new frm_TKNgThue();
             dsnt.Show();
+            
         }
 
         private void btnTrangThai_Click(object sender, EventArgs e)
         {
-            TrangThai trangThai = new TrangThai();
-            addNewTab("Trạng thái thuê", trangThai, 6);
+            frm_XemTienPhong frm_XTP = new frm_XemTienPhong(userName, MaKT);
+            addNewTab("Xem tiền nhà", frm_XTP, 6);
         }
 
         private void btnDsThuTien_Click(object sender, EventArgs e)
@@ -171,8 +138,8 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            frmTraPhong traphong =new frmTraPhong();
-            addNewTab("Trả phòng", traphong, 3);
+            //frmTraPhong traphong =new frmTraPhong();
+            //addNewTab("Trả phòng", traphong, 3);
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
@@ -181,23 +148,6 @@ namespace QuanLyNhaTro.FrmMain
             addNewTab("Tính tiền", tinhTien, 1);
         }
 
-        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            BLPhong bLPhong = new BLPhong();
-            string makv = cbKV.SelectedValue.ToString();
-            var phongtrong = bLPhong.Layphong_TT_MaKV("Trống", makv);
-            var phongdathue = bLPhong.Layphong_TT_MaKV("Đã thuê", makv);
-            numTrong.Text = phongtrong.Rows.Count.ToString();
-            numRent.Text = phongdathue.Rows.Count.ToString();
-        }
-        public void Load_CB_KV()
-        {
-            //Load ComboBox Khu Vuc
-            BLKhuVuc bLKhuVuc = new BLKhuVuc();
-            cbKV.DisplayMember = "TenKhuVuc";
-            cbKV.ValueMember = "MaKhuVuc";
-            cbKV.DataSource = bLKhuVuc.LayKhuVuc();
-        }
 
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
@@ -207,13 +157,13 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnThemKV_Click(object sender, EventArgs e)
         {
-            ThemKV thKV = new ThemKV();
-            addNewTab("Thêm khu vực", thKV, 9);
+            //ThemKV thKV = new ThemKV();
+            //addNewTab("Thêm khu vực", thKV, 9);
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
-            frmChangePass frmChangePass = new frmChangePass(userName,PASS);
+            frmChangePass frmChangePass = new frmChangePass(userName,MaKT);
             frmChangePass.ShowDialog();
         }
 
@@ -231,13 +181,13 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btn_ttTK_Click(object sender, EventArgs e)
         {
-            AccountInformation accountInformation = new AccountInformation(userName, PASS);
+            AccountInformation accountInformation = new AccountInformation(userName, MaKT);
             accountInformation.ShowDialog();
         }
 
         private void btn_DoiMK_Click(object sender, EventArgs e)
         {
-            frmChangePass frmChangePass = new frmChangePass(userName, PASS);
+            frmChangePass frmChangePass = new frmChangePass(userName, MaKT);
             frmChangePass.ShowDialog();
         }
 
@@ -278,7 +228,7 @@ namespace QuanLyNhaTro.FrmMain
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            AccountInformation accountInformation = new AccountInformation(userName,PASS);
+            AccountInformation accountInformation = new AccountInformation(userName,MaKT);
             accountInformation.ShowDialog();
         }
     }

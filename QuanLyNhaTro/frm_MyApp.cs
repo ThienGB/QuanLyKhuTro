@@ -43,8 +43,8 @@ namespace QuanLyNhaTro
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Guest frm_guest = new frm_Guest();
-            frm_guest.ShowDialog();
+            frm_LoginGuest frm_loginGuest = new frm_LoginGuest();
+            frm_loginGuest.ShowDialog();
             this.Show();
         }
     }

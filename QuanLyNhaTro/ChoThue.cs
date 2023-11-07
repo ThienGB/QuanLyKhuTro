@@ -15,7 +15,7 @@ namespace QuanLyNhaTro.FrmMain
     public partial class ChoThue : UserControl
     {
         BLPhong bLPhong = new BLPhong();
-        BLKhuVuc bLKhuVuc = new BLKhuVuc();
+        BLKhuTro bLKhuVuc = new BLKhuTro();
         BLTTDkiPhong bLTTDkiPhong = new BLTTDkiPhong();
         BLTTKhach bLTTKhach = new BLTTKhach();
         BLTTThuePhong bLTTThuePhong = new BLTTThuePhong();
@@ -40,7 +40,7 @@ namespace QuanLyNhaTro.FrmMain
             //Load ComboBox Khu Vuc
             cbKhuVuc.DisplayMember = "TenKhuVuc";
             cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DataSource = bLKhuVuc.LayKhuVuc();
+            cbKhuVuc.DataSource = bLKhuVuc.LayKhuTro();
         }
 
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,8 +118,8 @@ namespace QuanLyNhaTro.FrmMain
                 string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu, makhach;
                 DateTime ngaysinh;
                 //Sinh Ma Khach moi
-                
-                makhach = bLTTKhach.LayIDMoi();
+
+                makhach = "1";
                 //Lay thong tin bang ThongTinKhach
                 ho = txtHo.Text.Trim();
                 ten = txtTen.Text.Trim();
@@ -153,8 +153,9 @@ namespace QuanLyNhaTro.FrmMain
                 {
                     if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //Them vao bang ThongTinKhach               
-                        bool themKhach = bLTTKhach.ThemKhach(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
+                        //Them vao bang ThongTinKhach
+                        string err = "";
+                        bool themKhach = bLTTKhach.ThemKhach(ho, gioitinh, cmnd, quequan, nghenghiep, maphong, ngaysinh, out err);
                         if (themKhach)
                         {
                             //Them vao bang ThongTinThuePhong
@@ -163,9 +164,9 @@ namespace QuanLyNhaTro.FrmMain
                             string select_maphong = lblMaphong.Text;
                             DateTime ngaythue = dtpNgayThue.Value;
                             tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
-
+                            
                             //INSERT vao bang
-                            bool themTTThue = bLTTThuePhong.ThemThongTinThue(idtttp, makhach, maphong, ngaythue, tiendatcoc);
+                            bool themTTThue = bLTTThuePhong.ThemThongTinThue(makhach,maphong,ngaythue,tiendatcoc);
 
                             //Cap nhat trang thai phong
                             bLPhong.UpdateTrangThai(select_maphong, "Đã thuê");

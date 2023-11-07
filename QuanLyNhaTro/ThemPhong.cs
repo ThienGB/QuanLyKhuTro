@@ -13,7 +13,7 @@ namespace QuanLyNhaTro
 {
     public partial class ThemPhong : UserControl
     {
-        BLKhuVuc bLKhuVuc = new BLKhuVuc();
+        BLKhuTro bLKhuVuc = new BLKhuTro();
         BLLoaiPhong bLLoaiPhong = new BLLoaiPhong();
         BLPhong bLPhong = new BLPhong();
 
@@ -32,7 +32,7 @@ namespace QuanLyNhaTro
         private void Load_ComboBox()
         {
             
-            var kv = bLKhuVuc.LayKhuVuc();
+            var kv = bLKhuVuc.LayKhuTro();
             cbKV.ValueMember = "MaKhuVuc";
             cbKV.DisplayMember = "TenKhuVuc";
             cbKV.DataSource = kv;
@@ -68,7 +68,7 @@ namespace QuanLyNhaTro
             }
             else if (Check()== true )
             {
-                bLPhong.ThemPhong(maphong, loaiphong, khuvuc, tenphong, day);
+                //bLPhong.ThemPhong(maphong, loaiphong, khuvuc, tenphong);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
                 

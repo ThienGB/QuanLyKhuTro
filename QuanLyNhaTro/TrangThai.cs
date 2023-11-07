@@ -14,7 +14,7 @@ namespace QuanLyNhaTro
 {
     public partial class TrangThai : UserControl
     {
-        BLKhuVuc bLKhuVuc = new BLKhuVuc();
+        BLKhuTro bLKhuVuc = new BLKhuTro();
         BLPhong bLPhong = new BLPhong();
         BLTTKhach bLTTKhach = new BLTTKhach();
 
@@ -27,36 +27,19 @@ namespace QuanLyNhaTro
         {
             Load_Data_TreeView1();
             Load_Data_TreeView2();
-            Load_CB_KV();
         }
 
-        public void Load_CB_KV()
-        {
-            //Load ComboBox Khu Vuc
-            
-            cbKV.DisplayMember = "TenKhuVuc";
-            cbKV.ValueMember = "MaKhuVuc";
-            cbKV.DataSource = bLKhuVuc.LayKhuVuc();
 
-
-        }
         //Load du lieu
-        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string makv = cbKV.SelectedValue.ToString();
-            var phongtrong = bLPhong.Layphong_TT_MaKV("Trống", makv);
-            var phongdathue = bLPhong.Layphong_TT_MaKV("Đã thuê", makv);
-            numTrong.Text = phongtrong.Rows.Count.ToString();
-            numRent.Text = phongdathue.Rows.Count.ToString();
-        }
+
 
         private void Load_Data_TreeView1()
         {
             treeView1.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
             {
-                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
-                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
                 TreeNode nodecha = treeView1.Nodes.Add(item_TenKV);
                 treeView1.Nodes[i].Tag = "1";
                 nodecha.ImageIndex = 0;
@@ -68,18 +51,16 @@ namespace QuanLyNhaTro
                     nodecon.ImageIndex = 1;
                     nodecon.SelectedImageIndex = 1;
                 }
-
-
             }
         }
 
         private void Load_Data_TreeView2()
         {
             treeView2.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
             {
-                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
-                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
 
                 TreeNode nodecha = treeView2.Nodes.Add(item_TenKV);
                 treeView2.Nodes[i].Tag = "1";
@@ -109,10 +90,11 @@ namespace QuanLyNhaTro
                 {
                     ListViewItem item = new ListViewItem(list_khach.Rows[i][0].ToString());
                     if (list_khach.Rows[i][2].ToString() == "Nam") item.ImageIndex = 3; else item.ImageIndex = 2;
-                    item.SubItems.Add(list_khach.Rows[i][1].ToString()+" "+ list_khach.Rows[i][2].ToString());
-                    item.SubItems.Add(list_khach.Rows[i][4].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][1].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][2].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][3].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][5].ToString());
                     item.SubItems.Add(list_khach.Rows[i][6].ToString());
-                    item.SubItems.Add(list_khach.Rows[i][7].ToString());
                     listKhach.Items.Add(item);
                 }
             }
@@ -123,23 +105,16 @@ namespace QuanLyNhaTro
             listKhach.Items.Clear();
             TreeNode theNode = this.treeView2.SelectedNode;
             string dkphong = theNode.Name.ToString();
-            var ttp = bLPhong.LayPhong_MaP(  dkphong );
+            var ttp = bLPhong.LayPhong_MaP1( dkphong );
             if (theNode.Tag.ToString() == "2")
             {
                 lbMaphong.Text = dkphong;
                 lbLoaiPhong.Text = ttp.Rows[0][1].ToString();
                 lbDienTich.Text = ttp.Rows[0][2].ToString();
                 lbgia.Text = string.Format("{0:#,##0}", Int32.Parse(ttp.Rows[0][3].ToString()));
+                DiaChi.Text = ttp.Rows[0][4].ToString();
                 panel2.Visible = true;
             }
-        }
-
-        private void listKhach_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = listKhach.SelectedItems[0];
-            string id = item.Text;
-            frm_Information frmInfo = new frm_Information(id);
-            frmInfo.ShowDialog();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -151,6 +126,7 @@ namespace QuanLyNhaTro
             Load_Data_TreeView2();
             panel2.Visible = false;
         }
-       
+
+
     }
 }
