@@ -19,7 +19,7 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayThongTinThue()
         {
-            return db.ExecuteQueryDataSet("SELECT * FROM ViewHopDong", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT * FROM ThongTinThuePhong", CommandType.Text);
         }
 
         public int LayIDMoi()
@@ -35,21 +35,16 @@ namespace QuanLyNhaTro.BS_layer
             return id;
         }
 
-        //Dùng 
-        public bool ThemThongTinThue( string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
+        public bool ThemThongTinThue(string idtttp, string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
         {
-            string sqlString = "exec InsertHopDong @MaKT='"+makhach+"', @MaPhong='"+maphong+"' ,@TienDatCoc ="+tiendatcoc+",@NgayBatDau='"+ngaythue+"'";
+            string sqlString = "INSERT INTO ThongTinThuePhong VALUES ('" + idtttp + "', '" + makhach + "', '" +
+                maphong + "', '" + ngaythue + "', '" + tiendatcoc + "', 'null'" + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
         public bool TraPhong(string maphong)
         {
-            string sqlString = "DELETE FROM ViewHopDong WHERE MaPhong = '" + maphong + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-        public bool XoaHopDong(string MaHD)
-        {
-            string sqlString= "exec DeleteHopDong @MaHD ='" + MaHD + "';";
+            string sqlString = "DELETE FROM ThongTinThuePhong WHERE MaPhong = '" + maphong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
     }

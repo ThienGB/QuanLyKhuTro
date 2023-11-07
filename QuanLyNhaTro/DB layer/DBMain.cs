@@ -13,7 +13,6 @@ namespace QuanLyNhaTro.DB_layer
 {
     class DBMain
     {
-        //string ConnStr = "Data Source=desktop-acd5hk3;Initial Catalog=QLKhuTro;Integrated Security=True";
         string ConnStr = "Data Source=DESKTOP-F3GD5US\\MAYAOTHIEN;Initial Catalog=QLKhuTro;Integrated Security=True";
         public SqlConnection conn = null;
         public SqlCommand comm = null;
@@ -58,7 +57,14 @@ namespace QuanLyNhaTro.DB_layer
             }
             catch (SqlException ex)
             {
-                error = ex.Message;
+                if (ex.Number == 2627) // Là mã lỗi cho ràng buộc duy nhất
+                {
+                    error = "Số CMND này đã tồn tại, vui lòng nhập lại";
+                }
+                else
+                {
+                    error = ex.Message; // Xử lý lỗi SQL Server ở trường hợp khác
+                }
             }
             finally
             {

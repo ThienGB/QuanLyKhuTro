@@ -94,11 +94,8 @@
     </Compile>
     <Compile Include="BS layer\BLDangNhap.cs" />
     <Compile Include="BS layer\BLDichVu.cs" />
-    <Compile Include="BS layer\BLDoanhThuNam.cs" />
-    <Compile Include="BS layer\BLDoanhThuThang.cs" />
-    <Compile Include="BS layer\BLKhuTro.cs" />
+    <Compile Include="BS layer\BLKhuVuc.cs" />
     <Compile Include="BS layer\BLLoaiPhong.cs" />
-    <Compile Include="BS layer\BLPhieuChi.cs" />
     <Compile Include="BS layer\BLPhieuThu.cs" />
     <Compile Include="BS layer\BLPhong.cs" />
     <Compile Include="BS layer\BLTTDkiPhong.cs" />
@@ -140,18 +137,6 @@
     </Compile>
     <Compile Include="ChoThue.Designer.cs">
       <DependentUpon>ChoThue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DoanhThuNam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoanhThuNam.Designer.cs">
-      <DependentUpon>DoanhThuNam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DoanhThuThang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoanhThuThang.Designer.cs">
-      <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </Compile>
     <Compile Include="Dsthutien.cs">
       <SubType>UserControl</SubType>
@@ -231,12 +216,6 @@
     <Compile Include="frm_TKNgThue.Designer.cs">
       <DependentUpon>frm_TKNgThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhuTro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KhuTro.Designer.cs">
-      <DependentUpon>KhuTro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDichVu.cs">
@@ -252,6 +231,12 @@
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThemKV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemKV.Designer.cs">
+      <DependentUpon>ThemKV.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemNguoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -272,12 +257,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThongKe.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinPhongMinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThongTinPhongMinh.Designer.cs">
-      <DependentUpon>ThongTinPhongMinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="TinhTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,7 +270,7 @@
       <DependentUpon>TrangThai.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTraPhong.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmTraPhong.designer.cs">
       <DependentUpon>frmTraPhong.cs</DependentUpon>
@@ -323,12 +302,6 @@
     <EmbeddedResource Include="ChoThue.resx">
       <DependentUpon>ChoThue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuNam.resx">
-      <DependentUpon>DoanhThuNam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuThang.resx">
-      <DependentUpon>DoanhThuThang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dsthutien.resx">
       <DependentUpon>Dsthutien.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,7 +331,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain\frm_Admin.resx">
       <DependentUpon>frm_Admin.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TKNgThue.resx">
       <DependentUpon>frm_TKNgThue.cs</DependentUpon>
@@ -368,9 +340,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_MyApp.resx">
       <DependentUpon>frm_MyApp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhuTro.resx">
-      <DependentUpon>KhuTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -388,6 +357,9 @@
     <EmbeddedResource Include="QLLoaiPhong.resx">
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemKV.resx">
+      <DependentUpon>ThemKV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemNguoi.resx">
       <DependentUpon>ThemNguoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -396,9 +368,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTK.resx">
       <DependentUpon>ThemTK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongTinPhongMinh.resx">
-      <DependentUpon>ThongTinPhongMinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TinhTien.resx">
       <DependentUpon>TinhTien.cs</DependentUpon>

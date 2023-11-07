@@ -131,9 +131,18 @@ namespace QuanLyNhaTro
             {
                 try
                 {
-                    bLTTKhach.ThemKhach(this.txtMP.Text, this.txtHT.Text, this.txtGT.Text, this.txtNN.Text, this.txtQQ.Text, this.txtCMND.Text, this.dtPNS.Value);
-                    LoadData();
-                    MessageBox.Show("Đã thêm xong!");
+                    string err = "";
+                    bool TrangThai = bLTTKhach.ThemKhach(this.txtMP.Text, this.txtHT.Text, this.txtGT.Text, this.txtNN.Text, this.txtQQ.Text, this.txtCMND.Text, this.dtPNS.Value, out err);
+                    if (!TrangThai)
+                    {
+                        MessageBox.Show(err);
+                    }    
+                    else
+                    {
+                        LoadData();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    
                 }
                 catch
                 {

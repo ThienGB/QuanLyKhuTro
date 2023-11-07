@@ -14,34 +14,43 @@ namespace QuanLyNhaTro.BS_layer
     {
         DBMain db = null;
         string err;
-        public BLLoaiPhong()
+        public BLLoaiPhong() 
         {
             db = new DBMain();
         }
         public DataTable LayLoaiPhong()
         {
-
-            return db.ExecuteQueryDataSet("select MaLP, TenLoaiPhong, DienTich, GiaThue from ViewThongTinLoaiPhong", CommandType.Text);
-
+            
+            return db.ExecuteQueryDataSet("select * from LoaiPhong ", CommandType.Text);
+            
         }
 
-        public bool ThemLoaiPhong(string TenLoaiPhong, int DienTich, int DonGia)
+        public bool ThemLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
         {
-            string sqlString = "exec insertThongTinLoaiPhong @DienTich= " + DienTich + ",	@GiaThue=" + DonGia + ",@TenLoaiPhong=N'" + TenLoaiPhong + "';";
+            string sqlString = "Insert Into LoaiPhong Values(" + "'" +
+                                     MaLoaiPhong + "',N'" +
+                                     TenLoaiPhong+ "',N'"+
+                                     DienTich + "'," +
+                                     DonGia + ",N'" +
+                                     GhiChu + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+            
         }
         public bool XoaLoaiPhong(string MaLoaiPhong)
         {
-            string sqlString = "exec DeleteThongTinLoaiPhong @MaLP ='" + MaLoaiPhong + "';";
+            string sqlString = "Delete From LoaiPhong Where MaLoaiPhong ='" + MaLoaiPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+           
         }
-        public bool CapNhatLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, int DienTich, int DonGia)
+        public bool CapNhatLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
         {
-            string sqlString = "exec UpdateThongTinLoaiPhong @MaLP = '" + MaLoaiPhong + "', @DienTich=" + DienTich + ",@GiaThue=" + DonGia + ", @TenLoaiPhong=N'" + TenLoaiPhong + "';";
+            string sqlString = "Update LoaiPhong Set TenLoaiPhong=N'" +
+                                TenLoaiPhong + 
+                                "',DienTich '"+ DienTich + 
+                                "',DonGia "+ DonGia + 
+                                " Where MaLoaiPhong='" + MaLoaiPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+            
         }
     }
 }

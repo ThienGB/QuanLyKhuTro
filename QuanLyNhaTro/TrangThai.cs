@@ -14,7 +14,7 @@ namespace QuanLyNhaTro
 {
     public partial class TrangThai : UserControl
     {
-        BLKhuTro bLKhuVuc = new BLKhuTro();
+        BLKhuVuc bLKhuVuc = new BLKhuVuc();
         BLPhong bLPhong = new BLPhong();
         BLTTKhach bLTTKhach = new BLTTKhach();
 
@@ -36,10 +36,10 @@ namespace QuanLyNhaTro
         private void Load_Data_TreeView1()
         {
             treeView1.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
             {
-                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
-                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
                 TreeNode nodecha = treeView1.Nodes.Add(item_TenKV);
                 treeView1.Nodes[i].Tag = "1";
                 nodecha.ImageIndex = 0;
@@ -57,10 +57,10 @@ namespace QuanLyNhaTro
         private void Load_Data_TreeView2()
         {
             treeView2.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
             {
-                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
-                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
 
                 TreeNode nodecha = treeView2.Nodes.Add(item_TenKV);
                 treeView2.Nodes[i].Tag = "1";
@@ -105,7 +105,7 @@ namespace QuanLyNhaTro
             listKhach.Items.Clear();
             TreeNode theNode = this.treeView2.SelectedNode;
             string dkphong = theNode.Name.ToString();
-            var ttp = bLPhong.LayPhong_MaP1( dkphong );
+            var ttp = bLPhong.LayPhong_MaP(  dkphong );
             if (theNode.Tag.ToString() == "2")
             {
                 lbMaphong.Text = dkphong;

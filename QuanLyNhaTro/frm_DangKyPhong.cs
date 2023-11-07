@@ -14,7 +14,7 @@ namespace QuanLyNhaTro
     public partial class frmDangKyPhong : Form
     {
         BLTTDkiPhong bLTTDkiPhong = new BLTTDkiPhong();
-        BLKhuTro bLKhuVuc = new BLKhuTro();
+        BLKhuVuc bLKhuVuc = new BLKhuVuc();
         BLPhong bLPhong = new BLPhong();
 
         public frmDangKyPhong()
@@ -33,7 +33,7 @@ namespace QuanLyNhaTro
             //Load ComboBox Khu Vuc
             cbKhuVuc.DisplayMember = "TenKhuVuc";
             cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DataSource = bLKhuVuc.LayKhuTro();
+            cbKhuVuc.DataSource = bLKhuVuc.LayKhuVuc();
         }
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,7 +111,7 @@ namespace QuanLyNhaTro
                 }
                 else
                 {
-                    bool dki = bLTTDkiPhong.ThemThongTinDangKy(lstLoaiPhong.SelectedItems[0].Text,ho , ten, cbGioiTinh.SelectedItem.ToString(),ngaysinh, cmnd, quequan, nghenghiep);
+                    bool dki = bLTTDkiPhong.ThemThongTinDangKy(id, ho, ten, cbGioiTinh.SelectedItem.ToString(), ngaysinh, cmnd, quequan, nghenghiep, makhuvuc, lstLoaiPhong.SelectedItems[0].Text);
 
                     MessageBox.Show("Đã thêm thành công!");
                 }

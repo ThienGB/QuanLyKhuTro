@@ -27,16 +27,9 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("SELECT * FROM ViewKhachThue", CommandType.Text);
         }
-
-        //Dùng 
-        public DataTable LayMaKT_CMND(string cmnd )
-        {
-            return db.ExecuteQueryDataSet("SELECT MaKT FROM KHACH_THUE where CMND='"+cmnd+"'", CommandType.Text);
-        }
-        //Dùng 
         public DataTable LayThongTinKhachQuaID(string id)
         {
-            return db.ExecuteQueryDataSet("SELECT * FROM KHACH_THUE WHERE MaKT = '" + id + "'", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT * FROM ThongTinKhach WHERE MaKhachTro = '" + id + "'", CommandType.Text);
         }
 
         public DataTable LayThongTinKhachQuaMaPhong(string maphong)
@@ -44,9 +37,26 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet("SELECT MaKT, HoTen, GioiTinh, NgaySinh,CMND, QueQuan, NgheNghiep FROM LocKhachThueTheoMaPhong ('" + maphong + "')", CommandType.Text);
         }
 
-        public bool ThemKhach(string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh)
+        public bool ThemKhach(string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh,out string err)
         {
-            string formattedDate = ngaysinh.ToString("yyy/MM/dd");
+            err = "";
+
+            {
+                string formattedDate = ngaysinh.ToString("yyyy/MM/dd");
+                string sqlString = "Exec InsertKhachThue "
+                    + "  @MaPhong ='" + maphong
+                    + "',@HoTen = N'" + hoten
+                    + "',@GioiTinh = N'" + gioitinh
+                    + "',@NgheNghiep = N'" + nghenghiep
+                    + "',@QueQuan = N'" + quequan
+                    + "',@CMND = N'" + cmnd
+                    + "',@NgaySinh ='" + formattedDate + "'";
+                return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+
+            }
+
+
+            /*string formattedDate = ngaysinh.ToString("yyy/MM/dd");
             string sqlString = "Exec InsertKhachThue "
                 + "  @MaPhong ='" + maphong
                 + "',@HoTen = N'" + hoten
@@ -55,7 +65,7 @@ namespace QuanLyNhaTro.BS_layer
                 + "',@QueQuan = N'" + quequan
                 + "',@CMND = N'" + cmnd
                 + "',@NgaySinh ='" + formattedDate + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);*/
         }
         public bool CapNhatThongTinKhach(string maKT, string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh)
         {
@@ -93,32 +103,10 @@ namespace QuanLyNhaTro.BS_layer
             return idkhach;
         }
 
-       
-        public bool CapNhatThongTinKhach(string id, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep, string ghichu, byte[] Image)
-        {
-            string query;
-            if (Image != null)
-            {
-                 query = "UPDATE KHACH_THUE SET Ho = @Ho, Ten = @Ten, GioiTinh = @GioiTinh, NgaySinh = @NgaySinh, CMND = @CMND, QueQuan = @QueQuan, NgheNghiep = @NgheNghiep, GhiChu = @GhiChu, AnhNhanDien = @AnhNhanDien WHERE MaKhachTro = @MaKhachTro";
-                db.comm.Parameters.AddWithValue("@AnhNhanDien", Image);
-            }
-            else query = "UPDATE KHACH_THUE SET Ho = @Ho, Ten = @Ten, GioiTinh = @GioiTinh, NgaySinh = @NgaySinh, CMND = @CMND, QueQuan = @QueQuan, NgheNghiep = @NgheNghiep, GhiChu = @GhiChu WHERE MaKT = @MaKhachTro";    
-            db.comm.Parameters.AddWithValue("@Ho", ho);
-            db.comm.Parameters.AddWithValue("@Ten", ten);
-            db.comm.Parameters.AddWithValue("@GioiTinh", gioitinh);
-            db.comm.Parameters.AddWithValue("@NgaySinh", ngaysinh);
-            db.comm.Parameters.AddWithValue("@CMND", cmnd);
-            db.comm.Parameters.AddWithValue("@QueQuan", quequan);
-            db.comm.Parameters.AddWithValue("@NgheNghiep", nghenghiep);
-            db.comm.Parameters.AddWithValue("@GhiChu", ghichu);
-            
-            db.comm.Parameters.AddWithValue("@MaKhachTro", id);
-            return db.MyExecuteNonQuery(query, CommandType.Text,ref err);                
-        }
 
         public byte[] LayAnh(string id)
         {          
-            string sqlString  = "SELECT TOP 1 AnhNhanDien FROM KHACH_THUE WHERE MaKT = N'" + id+"'";
+            string sqlString  = "SELECT TOP 1 AnhNhanDien FROM ThongTinKhach WHERE MaKhachTro = N'"+id+"'";
             var dataTable= db.ExecuteQueryDataSet(sqlString, CommandType.Text);
             if (dataTable.Rows.Count > 0)
             {
@@ -136,25 +124,21 @@ namespace QuanLyNhaTro.BS_layer
             }
         }
 
-        //Dùng 
+
         public DataTable LayThongTinKhach_ThongTinThue(string maphong)
         {
-            string sqlString = "SELECT TTP.MaKT, TK.HoTen " +
-                               "FROM HOP_DONG TTP " +
-                               "JOIN KHACH_THUE TK ON TTP.MaKT = TK.MaKT " +
-                               "WHERE TTP.MaPhong = '"+maphong+"'";
+            string sqlString = "SELECT TTP.MaKhachTro, TK.Ho + ' ' + TK.Ten AS HoTen " +
+                               "FROM ThongTinThuePhong TTP " +
+                               "JOIN ThongTinKhach TK ON TTP.MaKhachTro = TK.MaKhachTro " +
+                               "WHERE TTP.MaPhong = @MaPhong";
+            db.comm.Parameters.AddWithValue("@MaPhong", maphong);
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
 
         public bool TraPhong(string maPhong)
         {
-            string sqlString = "DELETE FROM KHACH_THUE WHERE MaPhong = '" + maPhong + "'";
+            string sqlString = "DELETE FROM ThongTinKhach WHERE MaPhong = '" + maPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-        public DataTable ThongTinPhongMinh(string MaPhong)
-        {
-            string sqlString = "SELECT * FROM HienThiPhong_TheoPhong("+MaPhong+");";
-            return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
     }
 }

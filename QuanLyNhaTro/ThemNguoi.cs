@@ -17,7 +17,7 @@ namespace QuanLyNhaTro
         DateTime ngaysinh;
         string makhach;
         int tiendatcoc;
-        BLKhuTro dbKhuVuc = new BLKhuTro();
+        BLKhuVuc dbKhuVuc = new BLKhuVuc();
         BLLoaiPhong dbLoaiPhong = new BLLoaiPhong();
         BLPhong dbPhong = new BLPhong();
         BLTTKhach dbKhach = new BLTTKhach();
@@ -36,7 +36,7 @@ namespace QuanLyNhaTro
 
         private void Load_CBKhuVuc()
         {
-            var kv = dbKhuVuc.LayKhuTro();
+            var kv = dbKhuVuc.LayKhuVuc();
             cbKhuVuc.ValueMember = "MaKhuVuc";
             cbKhuVuc.DisplayMember = "TenKhuVuc";
             cbKhuVuc.DataSource = kv;
@@ -138,7 +138,7 @@ namespace QuanLyNhaTro
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            makhach = "1";
+            makhach = dbKhach.LayIDMoi();
 
             //Lay thong tin bang ThongTinKhach
             ho = txtHo.Text.Trim();
@@ -160,8 +160,8 @@ namespace QuanLyNhaTro
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               // dbKhach.ThemKhach(ho+ ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong);
-                dbThuePhong.ThemThongTinThue( makhach, maphong, ngaythue, tiendatcoc);
+               // dbKhach.ThemKhach(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
+                dbThuePhong.ThemThongTinThue(idtttp, makhach, maphong, ngaythue, tiendatcoc);
                 //Refresh Form
                 ListViewPhong.Items.Clear();
                 Load_ListViewPhong();

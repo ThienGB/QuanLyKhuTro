@@ -96,12 +96,5 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "update DangNhap set pass =N'" + pass + "' where id =N'" + id + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-
-        //Dùng 
-        public bool InsertTaiKhoan(string cmnd, string maphong, string makt )
-        {
-            string sql = "exec InsertTaiKhoan @TaiKhoan='"+cmnd+"',@MatKhau ='"+maphong+"', @MaKT ='"+makt+"'";
-            return db.MyExecuteNonQuery(sql, CommandType.Text, ref err);
-        }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using QuanLyNhaTro.DB_layer;
 using System;
 using System.Data;
-using System.Data.SqlTypes;
 
 namespace QuanLyNhaTro.BS_layer
 {
@@ -18,29 +17,20 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayPhieuThu()
         {
-            return db.ExecuteQueryDataSet("select * from PHIEU_THU", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from PhieuThu", CommandType.Text);
             
         }
-        public DataTable LayPhieuThuTheoMa(int Mapt)
-        {
-            string sql = "select * from PHIEU_THU where MaPT = " + Mapt;
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
 
-        }
-
-        //Dùng 
-        public DataTable LayPhieuThuTheoMaPhong(string MaP)
+        public DataTable LayPhieuThuTheoMa(int maPT)
         {
-            string sql = "select * from LayPhieuThuTheoMaPhong('"+MaP+"')";
+            string sql = "select * from PhieuThu where MaPT = " + maPT ;
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
            
         }
-
-
         public double  TongDaThu()
         {
             string sql = "SELECT SUM(TongTien) " +
-                   "FROM PHIEU_THU " +
+                   "FROM PhieuThu " +
                    "Where TrangThai= N'Đã thu'";
             var table = db.ExecuteQueryDataSet(sql, CommandType.Text);
             int a = table.Rows.Count;
@@ -53,7 +43,6 @@ namespace QuanLyNhaTro.BS_layer
 
         }
 
-
         public double LayIDMoi()
         {
             var table = this.LayPhieuThu();
@@ -62,18 +51,27 @@ namespace QuanLyNhaTro.BS_layer
             return id_pt;
         }
 
-        //Dùng 
-        public bool ThemPhieuThu(string MaP, int PhiMT, int Sodien, int Sonuoc)
+        public bool ThemPhieuThu(double idPT, string maphong, DateTime ngaylap, DateTime ngaythu, long tiennha, int sokidien, long tiendien, int sokhoinuoc, long PT_tiennuoc, long tongtien)
         {
-            string sql = "exec TaoPhieuThu  @MaPhong='" + MaP + "' ,@PhiMoiTruong=" + PhiMT + ", @SoDien=" + Sodien + ", @SoNuoc=" + Sonuoc;
-            return db.MyExecuteNonQuery(sql, CommandType.Text, ref err);
+            string sqlString = "Insert Into PhieuThu Values(" + 
+                                     idPT + ",N'" +
+                                     maphong + "',N'" +
+                                     ngaylap + "',N'" +
+                                     ngaythu + "',N'" +
+                                     tiennha + "',N'" +
+                                     sokidien + "',N'" +
+                                     tiendien + "',N'" +
+                                     sokhoinuoc + "',N'" +
+                                     PT_tiennuoc + "',N'" +
+                                     tongtien +                 
+                                     "',N'Chưa thu')";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-
 
         public DataTable LayThangPhieuThu()
         {
             string sql = "SELECT CONVERT(VARCHAR(2), NgayLap, 101) +'/' + CONVERT(VARCHAR(4), NgayLap, 120) AS Thang " +
-                   "FROM PHIEU_THU " +
+                   "FROM PhieuThu " +
                    "ORDER BY NgayLap ASC";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
@@ -97,7 +95,7 @@ namespace QuanLyNhaTro.BS_layer
         public DataTable LayPhieuThuTheoThang(string thang)
         {
             string sql= "SELECT MaPT, NgayLap, MaPhong " +
-                   "FROM PHIEU_THU " +
+                   "FROM PhieuThu " +
                    "WHERE CONVERT(VARCHAR(2), NgayLap, 101) + '/' + CONVERT(VARCHAR(4), NgayLap, 120) ='"+ thang +
                    "' AND TrangThai = N'Đã thu'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);            
@@ -106,7 +104,7 @@ namespace QuanLyNhaTro.BS_layer
         public long TongDoanhThuThang(string thang)
         {
             string sql = "SELECT SUM(TongTien) " +
-                   "FROM PHIEU_THU " +
+                   "FROM PhieuThu " +
                    "WHERE CONVERT(VARCHAR(2), NgayLap, 101) + '/' + CONVERT(VARCHAR(4), NgayLap, 120) = '"+thang +
                    "'AND TrangThai = N'Đã thu'";
             var table = db.ExecuteQueryDataSet(sql, CommandType.Text);
@@ -120,16 +118,16 @@ namespace QuanLyNhaTro.BS_layer
         public DataTable LayPhongChuaThu(string makv)
         {
             string sqlString = "SELECT pt.MaPT, pt.MaPhong, pt.TongTien " +
-                   "FROM PHIEU_THU pt " +
+                   "FROM PhieuThu pt " +
                    "INNER JOIN Phong p ON pt.MaPhong = p.MaPhong " +
-                   "WHERE p.MaKhuTro ='" + makv + "'AND pt.TrangThai = N'Chưa thu'";
+                   "WHERE p.MaKhuVuc ='" + makv + "'AND pt.TrangThai = N'Chưa thu'";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
            
         }
 
         public bool CapNhatPhieuThu(float id ,DateTime ngaythu)
         {
-            string sqlString = "Update PHIEU_THU Set NgayThu=N'" +
+            string sqlString = "Update PhieuThu Set NgayThu=N'" +
                                     ngaythu +"', TrangThai = N'Đã thu'"+ " Where MaPT=N'" + id+"'" ;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
            

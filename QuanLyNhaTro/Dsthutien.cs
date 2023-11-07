@@ -13,7 +13,7 @@ namespace QuanLyNhaTro.FrmMain
 {
     public partial class Dsthutien : UserControl
     {
-        BLKhuTro dbkv = new BLKhuTro();
+        BLKhuVuc dbkv = new BLKhuVuc();
         BLPhieuThu dbPT = new BLPhieuThu();
 
         string maphong;
@@ -29,7 +29,7 @@ namespace QuanLyNhaTro.FrmMain
             {
                 cbKhuVuc.DisplayMember = "TenKhuVuc";
                 cbKhuVuc.ValueMember = "MaKhuVuc";
-                cbKhuVuc.DataSource = dbkv.LayKhuTro();
+                cbKhuVuc.DataSource = dbkv.LayKhuVuc();
             }
             catch
             {

@@ -138,8 +138,8 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            //frmTraPhong traphong =new frmTraPhong();
-            //addNewTab("Trả phòng", traphong, 3);
+            frmTraPhong traphong =new frmTraPhong();
+            addNewTab("Trả phòng", traphong, 3);
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
@@ -157,8 +157,8 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnThemKV_Click(object sender, EventArgs e)
         {
-            //ThemKV thKV = new ThemKV();
-            //addNewTab("Thêm khu vực", thKV, 9);
+            ThemKV thKV = new ThemKV();
+            addNewTab("Thêm khu vực", thKV, 9);
         }
 
         private void buttonX2_Click(object sender, EventArgs e)

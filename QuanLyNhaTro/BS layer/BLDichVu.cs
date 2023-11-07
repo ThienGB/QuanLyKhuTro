@@ -6,8 +6,6 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using QuanLyNhaTro.DB_layer;
-using System.Data.SqlTypes;
-using System.Data.SqlClient;
 
 namespace QuanLyNhaTro.BS_layer
 {
@@ -21,55 +19,36 @@ namespace QuanLyNhaTro.BS_layer
             db = new DBMain();
         }
 
-        //Dùng 
-        public DataTable LoadTienDichVu(string MaDV)
+        public DataTable LoadTienDichVu(string TenDV)
         {
-            string sql = "SELECT * FROM LayDichVuByMaDV('" + MaDV+"')";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);           
+            string sql = "SELECT Id, TenDichVu, Gia FROM DichVu WHERE TenDichVu = N'" + TenDV + "'";
+                return db.ExecuteQueryDataSet(sql, CommandType.Text);           
         }
 
-        //Dùng 
         public DataTable LayThongTinDichVu()
         {
-            string sql = "SELECT * FROM viewThongTinDichVu";       
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);      
+            string sql = "SELECT ID, TenDichVu, Gia FROM DichVu";       
+            return db.ExecuteQueryDataSet(sql, CommandType.Text); 
+            
+           
         }
 
-        //Dùng 
-        public DataTable LayThongTinDichVuSuDung(string MaPhong)
+        public bool ThemDichVu(int ID, string TenDichVu, long Gia)
         {
-            string sql = "SELECT * FROM LayTTDVSuDung('" + MaPhong+"')";  
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-        }
-
-        public bool ThemDichVu(string ID, string TenDichVu, int Gia)
-        {
-            string sqlString = "exec InsertThongTinDichVu @MaDV='" + ID + "',@GiaTien=" + Gia + " , @TenDichVu= N'" + TenDichVu + "'";
+            string sqlString = "Insert Into DichVu Values(" +
+                                 "'" + ID + "',N'" + 
+                                 "'" +TenDichVu + "'," +
+                                 Gia + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+            
         }
 
-        //Dùng 
-        public bool ThemDichVuSuDung(string MaPhong, string MaDV, int soluong )
+        public bool XoaDichVu(int ID)
         {
-            string sqlString = "exec InsertSuDungDichVu @MaDV='" + MaDV + "',@MaPhong='" + MaPhong + "',@SoLuong="+soluong ;
+            string sqlString = "Delete From DichVu Where Id ='" + ID + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
+           
         }
-
-        public bool XoaDichVu(string ID)
-        {
-            string sqlString = "exec DeleteThongTinDichVu @MaDV='" + ID + "';";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
-        }
-
-        //Dùng 
-        public bool XoaDichVuSuDung(string MaDV, string MaPhong)
-        {
-            string sqlString = "exec DeleteSuDungDichVu @MaDV='" + MaDV + "',@MaPhong='" + MaPhong +"'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }        
 
         public bool CapNhatDichVu(int ID, string TenDichVu, long Gia)
         {
@@ -77,14 +56,5 @@ namespace QuanLyNhaTro.BS_layer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
             
         }
-
-        //Dùng 
-        public bool CapNhatDichVu(string ID, string TenDichVu, int Gia)
-        {
-            string sqlString = "exec UpdateThongTinDichVu @MaDV='" + ID + "',@GiaTien=" + Gia + " , @TenDichVu= N'" + TenDichVu + "';";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
-        }
-
     }
 }
