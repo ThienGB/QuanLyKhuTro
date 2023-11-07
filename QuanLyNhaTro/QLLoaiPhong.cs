@@ -30,7 +30,6 @@ namespace QuanLyNhaTro
                 this.txtTLP.ResetText();
                 this.txtDT.ResetText();
                 this.txtGia.ResetText();
-                this.txtGhiChu.ResetText();
                 this.btnLuu.Enabled = false;
                 this.btnHuy.Enabled = false;
                 this.btnThem.Enabled = true;
@@ -57,14 +56,13 @@ namespace QuanLyNhaTro
             this.txtTLP.ResetText();
             this.txtDT.ResetText();
             this.txtGia.ResetText();
-            this.txtGhiChu.ResetText();
             this.btnLuu.Enabled = true;
             this.btnHuy.Enabled = true;
             this.btnThem.Enabled = false;
             this.btnSua.Enabled = false;
             this.btnXoa.Enabled = false;
-            this.txtMLP.Enabled = true;
-            this.txtMLP.Focus();
+            this.txtMLP.Enabled = false;
+            this.txtTLP.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -90,7 +88,6 @@ namespace QuanLyNhaTro
             this.txtTLP.Text = dgvQLLP.Rows[current].Cells[1].Value.ToString();
             this.txtDT.Text = dgvQLLP.Rows[current].Cells[2].Value.ToString();
             this.txtGia.Text = dgvQLLP.Rows[current].Cells[3].Value.ToString();
-            this.txtGhiChu.Text = dgvQLLP.Rows[current].Cells[4].Value.ToString();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -100,7 +97,6 @@ namespace QuanLyNhaTro
             this.txtTLP.ResetText();
             this.txtDT.ResetText();
             this.txtGia.ResetText();
-            this.txtGhiChu.ResetText();
             this.btnLuu.Enabled = false;
             this.btnHuy.Enabled = false;
             this.btnThem.Enabled = true;
@@ -116,9 +112,9 @@ namespace QuanLyNhaTro
             {
                 try
                 {
-                    float DienTich = float.Parse(this.txtDT.Text);
-                    float Gia = float.Parse(this.txtGia.Text);
-                    dbLP.ThemLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia, this.txtGhiChu.Text);
+                    int DienTich = int.Parse(this.txtDT.Text);
+                    int Gia = int.Parse(this.txtGia.Text);
+                    dbLP.ThemLoaiPhong(this.txtTLP.Text, DienTich, Gia);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -129,9 +125,9 @@ namespace QuanLyNhaTro
             }
             else
             {
-                float DienTich = float.Parse(this.txtDT.Text);
-                float Gia = float.Parse(this.txtGia.Text); ;
-                dbLP.CapNhatLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia, this.txtGhiChu.Text);
+                int DienTich = int.Parse(this.txtDT.Text);
+                int Gia = int.Parse(this.txtGia.Text); ;
+                dbLP.CapNhatLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia);
                 LoadData();
                 MessageBox.Show("Đã thêm xong!");
             }

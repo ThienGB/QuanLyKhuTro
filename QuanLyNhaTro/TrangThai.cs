@@ -14,7 +14,7 @@ namespace QuanLyNhaTro
 {
     public partial class TrangThai : UserControl
     {
-        BLKhuVuc bLKhuVuc = new BLKhuVuc();
+        BLKhuTro bLKhuVuc = new BLKhuTro();
         BLPhong bLPhong = new BLPhong();
         BLTTKhach bLTTKhach = new BLTTKhach();
 
@@ -36,7 +36,7 @@ namespace QuanLyNhaTro
             
             cbKV.DisplayMember = "TenKhuVuc";
             cbKV.ValueMember = "MaKhuVuc";
-            cbKV.DataSource = bLKhuVuc.LayKhuVuc();
+            cbKV.DataSource = bLKhuVuc.LayKhuTro();
 
 
         }
@@ -53,10 +53,10 @@ namespace QuanLyNhaTro
         private void Load_Data_TreeView1()
         {
             treeView1.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
             {
-                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
-                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
                 TreeNode nodecha = treeView1.Nodes.Add(item_TenKV);
                 treeView1.Nodes[i].Tag = "1";
                 nodecha.ImageIndex = 0;
@@ -76,10 +76,10 @@ namespace QuanLyNhaTro
         private void Load_Data_TreeView2()
         {
             treeView2.ImageList = TwImgList;
-            for (int i = 0; i < bLKhuVuc.LayKhuVuc().Rows.Count; i++)
+            for (int i = 0; i < bLKhuVuc.LayKhuTro().Rows.Count; i++)
             {
-                string item_MaKV = bLKhuVuc.LayKhuVuc().Rows[i][0].ToString();
-                string item_TenKV = bLKhuVuc.LayKhuVuc().Rows[i][1].ToString();
+                string item_MaKV = bLKhuVuc.LayKhuTro().Rows[i][0].ToString();
+                string item_TenKV = bLKhuVuc.LayKhuTro().Rows[i][1].ToString();
 
                 TreeNode nodecha = treeView2.Nodes.Add(item_TenKV);
                 treeView2.Nodes[i].Tag = "1";

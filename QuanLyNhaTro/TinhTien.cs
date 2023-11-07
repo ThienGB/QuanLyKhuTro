@@ -13,7 +13,7 @@ namespace QuanLyNhaTro
 {
     public partial class TinhTien : UserControl
     {
-        BLKhuVuc dbkv = new BLKhuVuc();
+        BLKhuTro dbkv = new BLKhuTro();
         BLPhong dbphong = new BLPhong();
         BLTTKhach dbttkhach = new BLTTKhach();
         BLDichVu dbdv = new BLDichVu();
@@ -33,7 +33,7 @@ namespace QuanLyNhaTro
 
         private void Load_CBKV()
         {
-            var kv = dbkv.LayKhuVuc();
+            var kv = dbkv.LayKhuTro();
             cbKhuVuc.ValueMember = "MaKhuVuc";
             cbKhuVuc.DisplayMember = "TenKhuVuc";
             cbKhuVuc.DataSource = kv;
@@ -227,7 +227,7 @@ namespace QuanLyNhaTro
             if (MessageBox.Show("Thời gian lập hóa đơn: \n" + ngaylap.ToString() + "\nMã Phòng: " + maphong, "Xác nhận lập hóa đơn: " + idPT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Insert vao bang phieu thu
-                bool i = dbpt.ThemPhieuThu(idPT, maphong, ngaylap, ngaythu, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien);
+                bool i = dbpt.ThemPhieuThu( maphong,  sokidien, tiendien, sokhoinuoc);
                 if (i == true)
                     MessageBox.Show("Lập hóa đơn thành công");
                 

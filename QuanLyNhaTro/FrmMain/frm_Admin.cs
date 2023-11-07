@@ -172,7 +172,7 @@ namespace QuanLyNhaTro.FrmMain
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
             frmTraPhong traphong =new frmTraPhong();
-            addNewTab("Trả phòng", traphong, 3);
+            traphong.ShowDialog();
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
@@ -193,10 +193,10 @@ namespace QuanLyNhaTro.FrmMain
         public void Load_CB_KV()
         {
             //Load ComboBox Khu Vuc
-            BLKhuVuc bLKhuVuc = new BLKhuVuc();
+            BLKhuTro bLKhuVuc = new BLKhuTro();
             cbKV.DisplayMember = "TenKhuVuc";
             cbKV.ValueMember = "MaKhuVuc";
-            cbKV.DataSource = bLKhuVuc.LayKhuVuc();
+            cbKV.DataSource = bLKhuVuc.LayKhuTro();
         }
 
         private void btnThemPhong_Click(object sender, EventArgs e)
@@ -207,8 +207,8 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnThemKV_Click(object sender, EventArgs e)
         {
-            ThemKV thKV = new ThemKV();
-            addNewTab("Thêm khu vực", thKV, 9);
+            //ThemKV thKV = new ThemKV();
+            //addNewTab("Thêm khu vực", thKV, 9);
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
@@ -274,6 +274,35 @@ namespace QuanLyNhaTro.FrmMain
         {
             FormReportLoaiPhong form = new FormReportLoaiPhong();
             form.ShowDialog();
+        }
+
+        private void ThemKhuTro_Click(object sender, EventArgs e)
+        {
+            KhuVuc kv = new KhuVuc();
+            kv.ShowDialog();
+        }
+
+        private void DoanhThuThang_Click(object sender, EventArgs e)
+        {
+            DoanhThuThang dtt=new DoanhThuThang();
+            dtt.ShowDialog();
+        }
+
+        private void DoanhThuNam_Click(object sender, EventArgs e)
+        {
+            DoanhThuNam dtn=new DoanhThuNam();
+            dtn.ShowDialog();
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThongTinPhong_Click(object sender, EventArgs e)
+        {
+            ThongTinPhongMinh ttpm = new ThongTinPhongMinh();
+            ttpm.ShowDialog();
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
