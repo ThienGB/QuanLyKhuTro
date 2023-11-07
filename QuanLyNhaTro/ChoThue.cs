@@ -154,7 +154,7 @@ namespace QuanLyNhaTro.FrmMain
                     if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         //Them vao bang ThongTinKhach               
-                        bool themKhach = bLTTKhach.ThemKhach(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
+                        bool themKhach = bLTTKhach.ThemKhach(ho, gioitinh, cmnd, quequan, nghenghiep, maphong, ngaysinh);
                         if (themKhach)
                         {
                             //Them vao bang ThongTinThuePhong

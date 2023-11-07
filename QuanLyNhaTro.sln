@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyNhaTro", "QuanLyNhaTro\QuanLyNhaTro.csproj", "{F8CC60D4-E038-4F67-9D3B-594BCD0E9097}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0E4C16E-8D89-484F-8FD3-89FD9CA66703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

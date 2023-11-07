@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -22,6 +23,10 @@ namespace QuanLyNhaTro.BS_layer
         public BLPhong()
         {
             db = new DBMain();
+        }
+        public DataTable LayPhongTro()
+        {
+            return db.ExecuteQueryDataSet("select * from ViewPhongTro", CommandType.Text);
         }
         public DataTable LayPhongtrong(string makv)
         {
@@ -60,19 +65,18 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayPhong_MaP(string maphong)
         {
-            string sql = "SELECT p.TenPhong, lp.TenLoaiPhong, lp.DienTichPhong, lp.DonGia " +
-                         "FROM Phong p " +
-                         "INNER JOIN LoaiPhong lp ON p.MaLoaiPhong = lp.MaLoaiPhong " +
-                         "WHERE p.MaPhong = N'"+maphong +"'";
+            string sql = "SELECT TenPhong, TenLoaiPhong, DienTich, GiaThue, DiaChi " +
+                         "FROM LayThongTinPhong" +
+                         "('"+maphong +"')";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
            
         }
 
-        public DataTable Layphong_TT_MaKV(string trangthai,string makv)
+        public DataTable Layphong_TT_MaKV(string trangthai,string makt)
         {
             string sql = "SELECT MaPhong, TenPhong " +
-                 "FROM Phong " +
-                 "WHERE TrangThai = N'"+trangthai +"' AND MaKhuVuc = N'"+makv+"'";
+                 "FROM LocPhongTheoTT_KV " +
+                 "(N'"+trangthai +"', '"+makt+"')";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
         }
@@ -84,16 +88,32 @@ namespace QuanLyNhaTro.BS_layer
            
         }
 
-        public bool ThemPhong(string maphong,string maloaiphong,string khuvuc,string tenphong,string  day)
+        public bool ThemPhongTro(string makhutro, string tenphong,string maloaiphong)
         {
-            string sqlString = "Insert Into Phong Values(" + "'" +
-                             maphong + "',N'" +
-                             maloaiphong + "',N'" +
-                             khuvuc + "',N'" +
-                             tenphong + "',N'" +
-                             day  + "',N'Trống',N'1')";
+            string sqlString = "Exec InsertPhongTro " 
+                + "  @MaKhuTro ='" + makhutro
+                + "',@TenPhong = N'" + tenphong 
+                + "',@MaLoaiPhong'" + maloaiphong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);           
         }
+        public bool CapNhatPhongTro(string maphong, string makhutro, string trangthai, string tenphong, string maloaiphong)
+        {
+            
+            string sqlString = "Exec UpdatePhongTro "
+                + "  @MaPhong ='" + maphong
+                + "',@MaKhuTro = N'" + makhutro
+                + "',@TrangThai = N'" + trangthai
+                + "',@TenPhong = N'" + tenphong
+                + "',@MaLoaiPhong'" + maloaiphong + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool XoaPhongTro(string maphong)
+        {
+            string sqlString = "Exec DeletePhongTro "
+                + " @MaPhong ='" + maphong + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+
         public DataTable LayPhongChuaLapHD(string makv, int  thismonth , int  thisyear ) 
         {
             string sql = "SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu Where MONTH(NgayLap)="
@@ -140,6 +160,18 @@ namespace QuanLyNhaTro.BS_layer
                 "where MaKhuVuc = N'" + makv + "' and TrangThai = N'Đã thuê'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
+        }
+        public string LayMaPhongBangMaKT(string MaKT)
+        {
+            string sql = "select Maphong From LayPhongBangMaKT ('" + MaKT + "')";
+            var table = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            int row = table.Rows.Count;
+            if (row != 0)
+            {
+                return table.Rows[0][0].ToString();
+            }
+            return null;
+
         }
     }
 }

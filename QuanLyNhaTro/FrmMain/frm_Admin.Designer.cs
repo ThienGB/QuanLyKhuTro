@@ -108,11 +108,11 @@
             // ribbonControl1
             // 
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.office2007StartButton1,
@@ -276,11 +276,11 @@
             this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonPanel2.Controls.Add(this.ribbonBar4);
             this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 54);
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 66);
             this.ribbonPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1734, 159);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1734, 146);
             this.ribbonPanel2.TabIndex = 2;
             this.ribbonPanel2.Visible = false;
             // 
@@ -301,7 +301,7 @@
             this.ribbonBar4.Location = new System.Drawing.Point(2, 0);
             this.ribbonBar4.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(849, 157);
+            this.ribbonBar4.Size = new System.Drawing.Size(849, 144);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonBar4.TabIndex = 2;
             this.ribbonBar4.Text = "Báo cáo ";
@@ -381,11 +381,11 @@
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonPanel3.Controls.Add(this.ribbonBar5);
             this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 54);
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 66);
             this.ribbonPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1734, 159);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1734, 146);
             this.ribbonPanel3.TabIndex = 3;
             this.ribbonPanel3.Visible = false;
             // 
@@ -401,7 +401,7 @@
             this.ribbonBar5.Location = new System.Drawing.Point(2, 0);
             this.ribbonBar5.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(369, 157);
+            this.ribbonBar5.Size = new System.Drawing.Size(369, 144);
             this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonBar5.TabIndex = 0;
             this.ribbonBar5.Text = "Them ";
@@ -447,7 +447,6 @@
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
             this.ribbonPanel4.Size = new System.Drawing.Size(1734, 159);
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // ribbonBar2
             // 
@@ -552,6 +551,7 @@
             this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(2, 0, 2, 2);
             this.ribbonPanel5.Size = new System.Drawing.Size(1734, 159);
             this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = false;
             // 
             // ribbonBar9
             // 
@@ -703,13 +703,13 @@
             // 
             // ribbonTabItem4
             // 
+            this.ribbonTabItem4.Checked = true;
             this.ribbonTabItem4.Name = "ribbonTabItem4";
             this.ribbonTabItem4.Panel = this.ribbonPanel4;
             this.ribbonTabItem4.Text = "Quản lý ";
             // 
             // ribbonTabItem5
             // 
-            this.ribbonTabItem5.Checked = true;
             this.ribbonTabItem5.Name = "ribbonTabItem5";
             this.ribbonTabItem5.Panel = this.ribbonPanel5;
             this.ribbonTabItem5.Text = "Tài khoản";

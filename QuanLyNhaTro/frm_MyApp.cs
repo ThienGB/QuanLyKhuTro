@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaTro.FrmMain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +26,8 @@ namespace QuanLyNhaTro
         private void btn_guest_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Guest frm_Guest = new frm_Guest();
-            frm_Guest.ShowDialog();
+            frmDangKyPhong frm_guest = new frmDangKyPhong();
+            frm_guest.ShowDialog();
             this.Show();
 
         }
@@ -36,6 +37,14 @@ namespace QuanLyNhaTro
             this.Hide();
             frm_Login frm_Login = new frm_Login();  
             frm_Login.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_LoginGuest frm_loginGuest = new frm_LoginGuest();
+            frm_loginGuest.ShowDialog();
             this.Show();
         }
     }

@@ -102,6 +102,30 @@
     <Compile Include="BS layer\BLTTKhach.cs" />
     <Compile Include="BS layer\BLTTThuePhong.cs" />
     <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="frm_XemTienPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_XemTienPhong.Designer.cs">
+      <DependentUpon>frm_XemTienPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login Guest.Designer.cs">
+      <DependentUpon>frm_Login Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLKhachThue.designer.cs">
+      <DependentUpon>QLKhachThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPhongTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPhongTro.designer.cs">
+      <DependentUpon>QLPhongTro.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +143,18 @@
     </Compile>
     <Compile Include="Dsthutien.Designer.cs">
       <DependentUpon>Dsthutien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\frm_Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain\frm_Guest.Designer.cs">
+      <DependentUpon>frm_Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangKyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangKyPhong.Designer.cs">
+      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReportDichVu.cs">
       <SubType>Form</SubType>
@@ -161,12 +197,6 @@
     </Compile>
     <Compile Include="FrmMain\frm_Admin.Designer.cs">
       <DependentUpon>frm_Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Guest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Guest.Designer.cs">
-      <DependentUpon>frm_Guest.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
@@ -254,6 +284,18 @@
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login Guest.resx">
+      <DependentUpon>frm_Login Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XemTienPhong.resx">
+      <DependentUpon>frm_XemTienPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLKhachThue.resx">
+      <DependentUpon>QLKhachThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPhongTro.resx">
+      <DependentUpon>QLPhongTro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +304,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dsthutien.resx">
       <DependentUpon>Dsthutien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain\frm_Guest.resx">
+      <DependentUpon>frm_Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangKyPhong.resx">
+      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportDichVu.resx">
       <DependentUpon>FormReportDichVu.cs</DependentUpon>
@@ -287,9 +335,6 @@
     <EmbeddedResource Include="frm_TKNgThue.resx">
       <DependentUpon>frm_TKNgThue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Guest.resx">
-      <DependentUpon>frm_Guest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,13 +357,6 @@
     <EmbeddedResource Include="QLLoaiPhong.resx">
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportDichVu.rdlc" />
-    <EmbeddedResource Include="ReportDoanhThuThang.rdlc" />
-    <EmbeddedResource Include="ReportDsPhong.rdlc" />
-    <EmbeddedResource Include="ReportKhach.rdlc" />
-    <EmbeddedResource Include="ReportLoaiPhong.rdlc" />
-    <EmbeddedResource Include="ReportPhong.rdlc" />
-    <EmbeddedResource Include="ReportTTKhach.rdlc" />
     <EmbeddedResource Include="ThemKV.resx">
       <DependentUpon>ThemKV.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +378,7 @@
     <EmbeddedResource Include="frmTraPhong.resx">
       <DependentUpon>frmTraPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

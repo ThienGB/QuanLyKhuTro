@@ -27,7 +27,7 @@ namespace QuanLyNhaTro.BS_layer
 
         public bool DangNhap(string id, string pass)
         {
-            string sqlString = "Select * From DangNhap where id =N'" + id + "' and pass = N'" + pass + "'";
+            string sqlString = "Select * From DangNhapAdmin ('" + id + "', '" + pass + "')";
             var table = db.ExecuteQueryDataSet(sqlString, CommandType.Text);
             int row = table.Rows.Count;
             if (row == 0)
@@ -36,6 +36,30 @@ namespace QuanLyNhaTro.BS_layer
             }
             return true;
         }
+
+        public bool DangNhapKhachThue(string id, string pass)
+        {
+            string sqlString = "Select * From DangNhapKhachThue ('" + id + "', '" + pass + "')";
+            var table = db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+            int row = table.Rows.Count;
+            if (row == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        public string LayMaKT(string taikhoan)
+        {
+            string sqlString = "select * from LayMaKTBangTaiKhoan ('"+ taikhoan + "')";
+            var table = db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+            int row = table.Rows.Count;
+            if (row != 0)
+            {
+                return table.Rows[0][0].ToString();
+            }
+            return null;
+        }
+
         public bool ThemTaiKhoan(string id, string pass)
         {
             string sqlString = "Insert Into DangNhap (id, pass) Values(" + "'" + id + "',N'" + pass + "')";

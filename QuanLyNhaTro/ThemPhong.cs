@@ -68,7 +68,7 @@ namespace QuanLyNhaTro
             }
             else if (Check()== true )
             {
-                bLPhong.ThemPhong(maphong, loaiphong, khuvuc, tenphong, day);
+               // bLPhong.ThemPhong(maphong, loaiphong, khuvuc, tenphong, day);
                 MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
                 
