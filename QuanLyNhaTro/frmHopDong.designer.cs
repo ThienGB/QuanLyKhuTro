@@ -35,7 +35,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvHopDong = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -87,7 +86,6 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.txtMaPhong);
             this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.ForestGreen;
             this.groupBox5.Location = new System.Drawing.Point(815, 421);
@@ -144,18 +142,6 @@
             this.label7.Size = new System.Drawing.Size(85, 26);
             this.label7.TabIndex = 74;
             this.label7.Text = "Phòng:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(16, 85);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 26);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "Ngày thuê: ";
             // 
             // groupBox2
             // 
@@ -485,7 +471,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView lvHopDong;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;

@@ -8,10 +8,7 @@ namespace QuanLyNhaTro
     public partial class frmSuDungDichVu : UserControl
     {
         private int tiendatcoc;
-        BLPhong dbPhong = new BLPhong();
-        BLTTKhach dbKhach = new BLTTKhach();
-        BLTTThuePhong dbThuePhong = new BLTTThuePhong();
-        BLKhuVuc dbKhuVuc = new BLKhuVuc();
+        BLDichVu dbdichvu=new BLDichVu();
 
 
         public frmSuDungDichVu()
@@ -21,31 +18,29 @@ namespace QuanLyNhaTro
 
         private void frmTraPhong_Load(object sender, EventArgs e)
         {
-            Load_CBKV();
+            unactive_input();
+        }
+        private void unactive_input() {
+            txtMaDV.Enabled = false;
+            txtPhong.Enabled = false;
+            txtSoLuong.Enabled = false;
+        }
+        private void active_input()
+        {
+            txtMaDV.Enabled = true;
+            txtPhong.Enabled = true;
+            txtSoLuong.Enabled = true;
         }
 
-        private void Load_CBKV()
-        {
-            var kv = dbKhuVuc.LayKhuVuc();
-            cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DisplayMember = "TenKhuVuc";
-            cbKhuVuc.DataSource = kv;
-        }
-
-        private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadListPhong();
-        }
-        public void HienThiDuLieuLenListView(DataTable dt, ListView listView)
+        public void HienThiDuLieuLen_DichVu(DataTable dt, ListView listView)
         {
             listView.Items.Clear();
 
             foreach (DataRow row in dt.Rows)
             {
-                ListViewItem item = new ListViewItem(row["MaPhong"].ToString()); // Giả sử cột "MaPhong" trong DataTable
-                item.SubItems.Add(row["TenPhong"].ToString()); // Giả sử cột "TenPhong" trong DataTable
-                item.SubItems.Add(row["MaLoaiPhong"].ToString()); // Giả sử cột "MaLoaiPhong" trong DataTable
-                item.SubItems.Add(row["Day"].ToString()); // Giả sử cột "Day" trong DataTable
+                ListViewItem item = new ListViewItem(row["MaDV"].ToString()); // Giả sử cột "MaPhong" trong DataTable
+                item.SubItems.Add(row["TenDichVu"].ToString()); // Giả sử cột "TenPhong" trong DataTable
+                item.SubItems.Add(row["GiaTien"].ToString()); // Giả sử cột "MaLoaiPhong" trong DataTable
 
                 listView.Items.Add(item); // Thêm mục vào ListView
             }
