@@ -213,8 +213,8 @@ namespace QuanLyNhaTro.FrmMain
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
-            frmChangePass frmChangePass = new frmChangePass(userName,PASS);
-            frmChangePass.ShowDialog();
+            frmThayDoiMK_Khach frmThayDoiMK_Khach = new frmThayDoiMK_Khach("phuongmoc", "123");
+            frmThayDoiMK_Khach.ShowDialog();
         }
 
         private void btn_QLyDV_Click(object sender, EventArgs e)

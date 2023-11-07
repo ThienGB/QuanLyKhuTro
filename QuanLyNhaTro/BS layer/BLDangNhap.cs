@@ -66,11 +66,12 @@ namespace QuanLyNhaTro.BS_layer
             }
             return false;
         }
-
-        public bool DoiMatKhau(string id, string pass)
+//PHUONG
+        public bool DoiMatKhau(string TK, string passOLD,String pasNEW)
         {
-            string sqlString = "update DangNhap set pass =N'" + pass + "' where id =N'" + id + "'";
+            string sqlString = "exec DoiMatKhau @CMND = '"+TK+"',@MatKhauCu ='"+passOLD+"', @MatKhauMoi ='"+pasNEW+"'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
     }
 }

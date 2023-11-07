@@ -994,3 +994,4 @@ D:\TaiLieuHocTap\NAM3\CSDL\DO_AN\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTr
 D:\TaiLieuHocTap\NAM3\CSDL\DO_AN\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.pdb
 D:\TaiLieuHocTap\NAM3\CSDL\DO_AN\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmHopDong.resources
 D:\TaiLieuHocTap\NAM3\CSDL\DO_AN\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmSuDungDichVu.resources
+D:\TaiLieuHocTap\NAM3\CSDL\DO_AN\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmThayDoiMK_Khach.resources

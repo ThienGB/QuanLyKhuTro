@@ -121,6 +121,12 @@
     <Compile Include="Dsthutien.Designer.cs">
       <DependentUpon>Dsthutien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThayDoiMK_Khach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThayDoiMK_Khach.designer.cs">
+      <DependentUpon>frmThayDoiMK_Khach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain\frm_Guest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,11 +175,11 @@
     <Compile Include="FormReportLoaiPhong.designer.cs">
       <DependentUpon>FormReportLoaiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChangePass.cs">
+    <Compile Include="frmChangePass_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangePass.designer.cs">
-      <DependentUpon>frmChangePass.cs</DependentUpon>
+    <Compile Include="frmChangePass_.designer.cs">
+      <DependentUpon>frmChangePass_.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Information.cs">
       <SubType>Form</SubType>
@@ -282,6 +288,9 @@
     <EmbeddedResource Include="Dsthutien.resx">
       <DependentUpon>Dsthutien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThayDoiMK_Khach.resx">
+      <DependentUpon>frmThayDoiMK_Khach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain\frm_Guest.resx">
       <DependentUpon>frm_Guest.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,8 +315,8 @@
     <EmbeddedResource Include="FormReportLoaiPhong.resx">
       <DependentUpon>FormReportLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangePass.resx">
-      <DependentUpon>frmChangePass.cs</DependentUpon>
+    <EmbeddedResource Include="frmChangePass_.resx">
+      <DependentUpon>frmChangePass_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Information.resx">
       <DependentUpon>frm_Information.cs</DependentUpon>
