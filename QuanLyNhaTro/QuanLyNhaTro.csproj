@@ -105,6 +105,30 @@
     <Compile Include="BS layer\BLTTKhach.cs" />
     <Compile Include="BS layer\BLTTThuePhong.cs" />
     <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="frm_XemTienPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_XemTienPhong.Designer.cs">
+      <DependentUpon>frm_XemTienPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login Guest.Designer.cs">
+      <DependentUpon>frm_Login Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLKhachThue.designer.cs">
+      <DependentUpon>QLKhachThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLPhongTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLPhongTro.designer.cs">
+      <DependentUpon>QLPhongTro.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,6 +305,18 @@
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login Guest.resx">
+      <DependentUpon>frm_Login Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XemTienPhong.resx">
+      <DependentUpon>frm_XemTienPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLKhachThue.resx">
+      <DependentUpon>QLKhachThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLPhongTro.resx">
+      <DependentUpon>QLPhongTro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +358,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain\frm_Admin.resx">
       <DependentUpon>frm_Admin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TKNgThue.resx">
       <DependentUpon>frm_TKNgThue.cs</DependentUpon>

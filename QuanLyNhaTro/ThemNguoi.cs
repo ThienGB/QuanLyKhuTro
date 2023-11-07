@@ -160,7 +160,7 @@ namespace QuanLyNhaTro
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                dbKhach.ThemKhach(ho+ ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong);
+               // dbKhach.ThemKhach(ho+ ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong);
                 dbThuePhong.ThemThongTinThue( makhach, maphong, ngaythue, tiendatcoc);
                 //Refresh Form
                 ListViewPhong.Items.Clear();

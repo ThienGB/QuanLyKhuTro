@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.cbLuuMatKhau = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,19 +58,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(495, 42);
             this.txtUsername.TabIndex = 23;
-            // 
-            // cbLuuMatKhau
-            // 
-            this.cbLuuMatKhau.AutoSize = true;
-            this.cbLuuMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.cbLuuMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLuuMatKhau.Location = new System.Drawing.Point(471, 492);
-            this.cbLuuMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLuuMatKhau.Name = "cbLuuMatKhau";
-            this.cbLuuMatKhau.Size = new System.Drawing.Size(145, 28);
-            this.cbLuuMatKhau.TabIndex = 21;
-            this.cbLuuMatKhau.Text = "Lưu mật khẩu";
-            this.cbLuuMatKhau.UseVisualStyleBackColor = false;
             // 
             // btnLogin
             // 
@@ -201,7 +187,6 @@
             this.Controls.Add(this.picAnMK);
             this.Controls.Add(this.picHienMatKhau);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.cbLuuMatKhau);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -228,7 +213,6 @@
 
         #endregion
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.CheckBox cbLuuMatKhau;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;

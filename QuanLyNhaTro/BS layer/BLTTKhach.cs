@@ -25,7 +25,7 @@ namespace QuanLyNhaTro.BS_layer
         }
         public DataTable LayThongTinKhach()
         {
-            return db.ExecuteQueryDataSet("SELECT * FROM KHACH_THUE", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT * FROM ViewKhachThue", CommandType.Text);
         }
 
         //Dùng 
@@ -41,16 +41,74 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayThongTinKhachQuaMaPhong(string maphong)
         {
-            return db.ExecuteQueryDataSet("SELECT MaKT, HoTen, GioiTinh, NgaySinh,CMND, QueQuan, NgheNghiep FROM KHACH_THUE WHERE MaPhong = '" + maphong + "'", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT MaKT, HoTen, GioiTinh, NgaySinh,CMND, QueQuan, NgheNghiep FROM LocKhachThueTheoMaPhong ('" + maphong + "')", CommandType.Text);
         }
 
-        //Dùng 
-        public bool ThemKhach( string hoten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong)
-        {          
-            string sqlString = "exec  InsertKhachThue @MaPhong ='"+maphong+"', @HoTen = N'"+hoten+"', @GioiTinh = N'"+gioitinh+"', @NgheNghiep = N'"+nghenghiep+"', @QueQuan=N'"+quequan+"', @CMND='"+cmnd+"', @NgaySinh = '"+ngaysinh+"'";
+        public bool ThemKhach(string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh,out string err)
+        {
+            err = "";
+
+            {
+                string formattedDate = ngaysinh.ToString("yyyy/MM/dd");
+                string sqlString = "Exec InsertKhachThue "
+                    + "  @MaPhong ='" + maphong
+                    + "',@HoTen = N'" + hoten
+                    + "',@GioiTinh = N'" + gioitinh
+                    + "',@NgheNghiep = N'" + nghenghiep
+                    + "',@QueQuan = N'" + quequan
+                    + "',@CMND = N'" + cmnd
+                    + "',@NgaySinh ='" + formattedDate + "'";
+                return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+
+            }
+
+
+            /*string formattedDate = ngaysinh.ToString("yyy/MM/dd");
+            string sqlString = "Exec InsertKhachThue "
+                + "  @MaPhong ='" + maphong
+                + "',@HoTen = N'" + hoten
+                + "',@GioiTinh = N'" + gioitinh
+                + "',@NgheNghiep = N'" + nghenghiep
+                + "',@QueQuan = N'" + quequan
+                + "',@CMND = N'" + cmnd
+                + "',@NgaySinh ='" + formattedDate + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);*/
+        }
+        public bool CapNhatThongTinKhach(string maKT, string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh)
+        {
+            string sqlString = "Exec UpdateKhachThue "
+                + "  @MaKT ='" + maKT
+                + "',@MaPhong = N'" + maphong
+                + "',@HoTen = N'" + hoten
+                + "',@GioiTinh = N'" + gioitinh
+                + "',@NgheNghiep = N'" + nghenghiep
+                + "',@QueQuan = N'" + quequan
+                + "',@CMND = N'" + cmnd
+                + "',@NgaySinh = '" + ngaysinh + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        public bool XoaKhach(string maKT)
+        {
+            string sqlString = "Exec DeleteKhachThue "
+                + "  @MaKT ='" + maKT + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
+
+        public string LayIDMoi()
+        {
+            BLTTKhach bLTTKhach = new BLTTKhach();
+            var table = bLTTKhach.LayThongTinKhach();
+            table.PrimaryKey = new DataColumn[] { table.Columns["MaKhachTro"] };
+            int id_khach = table.Rows.Count + 1;
+            string idkhach = "KT" + id_khach.ToString("000");
+            for (int i = 1; i < table.Rows.Count; i++)
+            {
+                if (table.Rows.Find("KT" + i.ToString("000")) == null)
+                    return ("KT" + i.ToString("000"));
+            }
+            return idkhach;
+        }
 
        
         public bool CapNhatThongTinKhach(string id, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep, string ghichu, byte[] Image)

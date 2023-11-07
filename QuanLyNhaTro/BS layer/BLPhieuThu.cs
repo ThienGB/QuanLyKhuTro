@@ -78,6 +78,20 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
         }
+        public DataTable LayThangPhieuThuTheoMaPhong(string MaPhong)
+        {
+            string sql = "SELECT Thang from PhieuThuTheoMaPhong ('" + MaPhong + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+        public DataTable LayPTTheoMaPhongvaThang(string MaPhong, string ThangNam)
+        {
+            string[] parts = ThangNam.Split('/');
+            int thang = int.Parse(parts[0]);
+            int nam = int.Parse(parts[1]);
+            string sql = "SELECT * from LayPTTheoMaPhongvaThang ('" + MaPhong + "', '" + thang + "', '" + nam + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
 
 
         public DataTable LayPhieuThuTheoThang(string thang)

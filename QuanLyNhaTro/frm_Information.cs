@@ -161,11 +161,11 @@ namespace MotelRoomManagement
             btnExit.Visible = true;
             btn_ChonAnh.Visible = false;
 
-            bool a = bLTTKhach.CapNhatThongTinKhach(_id, ho, ten, gioitinh, DateTime.Parse(birthday), cmnd, quequan, job, ghichu, binaryData);
-            if (a)
+            //bool a = bLTTKhach.CapNhatThongTinKhach(_id, ho, ten, gioitinh, DateTime.Parse(birthday), cmnd, quequan, job, ghichu, binaryData);
+/*            if (a)
                 MessageBox.Show("Đã sửa thông tin khách!");
             else
-                MessageBox.Show("Error","Sua ko thanh cong",MessageBoxButtons.OK);
+                MessageBox.Show("Error","Sua ko thanh cong",MessageBoxButtons.OK);*/
         }
         private void btExit_Click(object sender, EventArgs e)
         {
