@@ -1116,6 +1116,7 @@ E:\HocTap\Kì 5\HeQuanTriCSDL\DoAnCuoiKy\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\Qua
 E:\HocTap\Kì 5\HeQuanTriCSDL\DoAnCuoiKy\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLPhongTro.resources
 E:\HocTap\Kì 5\HeQuanTriCSDL\DoAnCuoiKy\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLKhachThue.resources
 E:\HocTap\Kì 5\HeQuanTriCSDL\DoAnCuoiKy\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_XemTienPhong.resources
+<<<<<<< HEAD
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -1239,3 +1240,5 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Doa
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuThang.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.KhuVuc.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThongTinPhongMinh.resources
+=======
+>>>>>>> parent of 7654ca9 (Thien them bat loi tu sql)

@@ -44,26 +44,9 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet("SELECT MaKT, HoTen, GioiTinh, NgaySinh,CMND, QueQuan, NgheNghiep FROM LocKhachThueTheoMaPhong ('" + maphong + "')", CommandType.Text);
         }
 
-        public bool ThemKhach(string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh,out string err)
+        public bool ThemKhach(string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh)
         {
-            err = "";
-
-            {
-                string formattedDate = ngaysinh.ToString("yyyy/MM/dd");
-                string sqlString = "Exec InsertKhachThue "
-                    + "  @MaPhong ='" + maphong
-                    + "',@HoTen = N'" + hoten
-                    + "',@GioiTinh = N'" + gioitinh
-                    + "',@NgheNghiep = N'" + nghenghiep
-                    + "',@QueQuan = N'" + quequan
-                    + "',@CMND = N'" + cmnd
-                    + "',@NgaySinh ='" + formattedDate + "'";
-                return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
-            }
-
-
-            /*string formattedDate = ngaysinh.ToString("yyy/MM/dd");
+            string formattedDate = ngaysinh.ToString("yyy/MM/dd");
             string sqlString = "Exec InsertKhachThue "
                 + "  @MaPhong ='" + maphong
                 + "',@HoTen = N'" + hoten
@@ -72,7 +55,7 @@ namespace QuanLyNhaTro.BS_layer
                 + "',@QueQuan = N'" + quequan
                 + "',@CMND = N'" + cmnd
                 + "',@NgaySinh ='" + formattedDate + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);*/
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool CapNhatThongTinKhach(string maKT, string maphong, string hoten, string gioitinh, string nghenghiep, string quequan, string cmnd, DateTime ngaysinh)
         {
