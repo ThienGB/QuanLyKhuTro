@@ -135,6 +135,11 @@ namespace QuanLyNhaTro.BS_layer
             string sql = "exec TTPTDaDong  @MaPT= '" + mapt + "'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-
+        //PHUONG
+  public DataTable TaoPhieuThu(string mapt,string phimt,string sodien,string sonuoc)
+        {
+            string sql = "exec TaoPhieuThu  @MaPhong='"+mapt+"' ,@PhiMoiTruong="+phimt+", @SoDien="+sodien+", @SoNuoc="+sonuoc;
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
     }
 }

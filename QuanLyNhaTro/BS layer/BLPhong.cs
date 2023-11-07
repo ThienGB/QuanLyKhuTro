@@ -153,6 +153,13 @@ namespace QuanLyNhaTro.BS_layer
             return null;
 
         }
+        //phuong
+    public DataTable ViewChuaTaoPhieuThu()
+        {
+            string sql = "select * from ViewChuaTaoPhieuThu";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
     }
 }
 
