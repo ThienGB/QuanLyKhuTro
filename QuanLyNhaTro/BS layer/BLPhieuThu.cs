@@ -132,7 +132,41 @@ namespace QuanLyNhaTro.BS_layer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
            
         }
+        public DataTable ViewChuaDongTien()
+        {
+            string sql = "SELECT * from  ViewChuaDongTien";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataTable ViewChuaDongTien_MaPT(string mapt)
+        {
+            string sql = "SELECT * from  ViewChuaDongTien where Mapt='" + mapt + "'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataTable CapNhapPT_MaPT(string mapt)
+        {
+            string sql = "exec TTPTDaDong  @MaPT= '" + mapt + "'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        //PHUONG
+        public DataTable TaoPhieuThu(string mapt, string phimt, string sodien, string sonuoc)
+        {
+            string sql = "exec TaoPhieuThu  @MaPhong='" + mapt + "' ,@PhiMoiTruong=" + phimt + ", @SoDien=" + sodien + ", @SoNuoc=" + sonuoc;
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        //Dùng 
+        public bool ThemPhieuThu(string MaP, int PhiMT, int Sodien, int Sonuoc)
+        {
+            string sql = "exec TaoPhieuThu  @MaPhong='" + MaP + "' ,@PhiMoiTruong=" + PhiMT + ", @SoDien=" + Sodien + ", @SoNuoc=" + Sonuoc;
+            return db.MyExecuteNonQuery(sql, CommandType.Text, ref err);
+        }
+        //Dùng 
+        public DataTable LayPhieuThuTheoMaPhong(string MaP)
+        {
+            string sql = "select * from LayPhieuThuTheoMaPhong('" + MaP + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
 
-        
+        }
+
+
     }
 }

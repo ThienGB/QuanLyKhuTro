@@ -47,5 +47,11 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "DELETE FROM ThongTinThuePhong WHERE MaPhong = '" + maphong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+        //Dùng 
+        public bool ThemThongTinThue(string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
+        {
+            string sqlString = "exec InsertHopDong @MaKT='" + makhach + "', @MaPhong='" + maphong + "' ,@TienDatCoc =" + tiendatcoc + ",@NgayBatDau='" + ngaythue + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
     }
 }

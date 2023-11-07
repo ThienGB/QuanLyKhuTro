@@ -91,10 +91,17 @@ namespace QuanLyNhaTro.BS_layer
             return false;
         }
 
-        public bool DoiMatKhau(string id, string pass)
+        public bool DoiMatKhau(string TK, string passOLD, string pasNEW,out string err)
         {
-            string sqlString = "update DangNhap set pass =N'" + pass + "' where id =N'" + id + "'";
+            err = "";
+            string sqlString = "exec DoiMatKhau @CMND = '" + TK + "',@MatKhauCu ='" + passOLD + "', @MatKhauMoi ='" + pasNEW + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+        //Dùng 
+        public bool InsertTaiKhoan(string cmnd, string maphong, string makt)
+        {
+            string sql = "exec InsertTaiKhoan @TaiKhoan='" + cmnd + "',@MatKhau ='" + maphong + "', @MaKT ='" + makt + "'";
+            return db.MyExecuteNonQuery(sql, CommandType.Text, ref err);
         }
     }
 }

@@ -53,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbChonPhong = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ListViewPhong = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -285,6 +286,7 @@
             this.lvKhachThue.TabIndex = 68;
             this.lvKhachThue.UseCompatibleStateImageBehavior = false;
             this.lvKhachThue.View = System.Windows.Forms.View.Details;
+            this.lvKhachThue.SelectedIndexChanged += new System.EventHandler(this.lvKhachThue_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
@@ -333,6 +335,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.ListViewPhong);
             this.groupBox2.Controls.Add(this.cbChonPhong);
             this.groupBox2.Controls.Add(this.label4);
@@ -344,6 +347,16 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách phòng";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(422, 52);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 68;
             // 
             // ListViewPhong
             // 
@@ -358,6 +371,7 @@
             this.ListViewPhong.Size = new System.Drawing.Size(556, 143);
             this.ListViewPhong.TabIndex = 65;
             this.ListViewPhong.UseCompatibleStateImageBehavior = false;
+            this.ListViewPhong.SelectedIndexChanged += new System.EventHandler(this.ListViewPhong_SelectedIndexChanged);
             this.ListViewPhong.Click += new System.EventHandler(this.ListViewPhong_Click);
             // 
             // columnHeader1
@@ -655,5 +669,6 @@
         private System.Windows.Forms.Label lblMaPhong;
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.ImageList TwImgList;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

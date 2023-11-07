@@ -18,11 +18,10 @@ namespace QuanLyNhaTro.BS_layer
         {
             db = new DBMain();
         }
+        //Dùng 
         public DataTable LayLoaiPhong()
         {
-            
-            return db.ExecuteQueryDataSet("select * from LoaiPhong ", CommandType.Text);
-            
+            return db.ExecuteQueryDataSet("select * from viewThongTinLoaiPhong ", CommandType.Text);
         }
 
         public bool ThemLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
@@ -51,6 +50,15 @@ namespace QuanLyNhaTro.BS_layer
                                 " Where MaLoaiPhong='" + MaLoaiPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
             
+        }
+        public DataTable LayGiaPhong()
+        {
+            return db.ExecuteQueryDataSet("SELECT DISTINCT GiaThue FROM THONG_TIN_LOAI_PHONG", CommandType.Text);
+        }
+
+        public DataTable LayDienTich()
+        {
+            return db.ExecuteQueryDataSet("SELECT DISTINCT DienTich  FROM THONG_TIN_LOAI_PHONG", CommandType.Text);
         }
     }
 }

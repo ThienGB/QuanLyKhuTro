@@ -252,28 +252,23 @@ namespace QuanLyNhaTro.FrmMain
             this.Close();
         }
 
-        private void btn_DsPhong_Click(object sender, EventArgs e)
+
+        private void buttonItem5_Click(object sender, EventArgs e)
         {
-            FormReportDSPhong formReportDSPhong = new FormReportDSPhong();
-            formReportDSPhong.ShowDialog(); 
+            frmHopDong form = new frmHopDong();
+            addNewTab("Hợp đồng", form, 12);
         }
 
-        private void btn_DoanhThu_Click(object sender, EventArgs e)
+        private void buttonItem6_Click(object sender, EventArgs e)
         {
-            FormReportDoanhThuThang formDthu = new FormReportDoanhThuThang();
-            formDthu.ShowDialog();  
+            frmSuDungDichVu frmSuDungDichVu = new frmSuDungDichVu();
+            addNewTab("Sử dụng dịch vụ", frmSuDungDichVu, 13);
         }
 
-        private void btn_DsDichVu_Click(object sender, EventArgs e)
+        private void buttonItem7_Click(object sender, EventArgs e)
         {
-            FormReportDichVu form = new FormReportDichVu();
-            form.ShowDialog();
-        }
-
-        private void btn_DsLoaiPhong_Click(object sender, EventArgs e)
-        {
-            FormReportLoaiPhong form = new FormReportLoaiPhong();
-            form.ShowDialog();
+            TaoPhieuChi taophieuchi = new TaoPhieuChi();
+            addNewTab("Tạo phiếu chi", taophieuchi, 14);
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

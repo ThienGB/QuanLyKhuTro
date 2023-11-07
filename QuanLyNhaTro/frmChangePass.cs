@@ -48,7 +48,7 @@ namespace QuanLyNhaTro
                 {
                     if (newP == rewrite)
                     {
-                        bool i = new BLDangNhap().DoiMatKhau(id, newP);
+                        //bool i = new BLDangNhap().DoiMatKhau(id, newP);
                         MessageBox.Show("Thay đổi thành công");
                         Close();
                     }

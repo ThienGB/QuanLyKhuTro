@@ -28,49 +28,6 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("select * from ViewPhongTro", CommandType.Text);
         }
-        public DataTable LayPhongtrong(string makv)
-        {
-            string sql = "SELECT lp.MaLoaiPhong, lp.TenLoaiPhong, lp.DienTichPhong, lp.DonGia, p.TrangThai " +
-                         "FROM LoaiPhong lp " +
-                         "INNER JOIN Phong p ON p.MaLoaiPhong = lp.MaLoaiPhong " +
-                         "WHERE p.MaKhuVuc = N'" + makv + "' AND p.TrangThai = N'Trống' " +
-                         "GROUP BY lp.MaLoaiPhong, lp.TenLoaiPhong, lp.DienTichPhong, lp.DonGia, p.TrangThai";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-           
-        }
-
-        public DataTable LayLoaiPhong()
-        {
-            string sql = "Select * from LoaiPhong ";
-            return db.ExecuteQueryDataSet(sql,CommandType.Text);
-            
-        }
-
-        public DataTable LayPhongtrong(string makv, string loaiphong)
-        {           
-            string sql = "SELECT * FROM Phong " +
-             "WHERE MaKhuVuc = N'" + makv + "' AND TrangThai = N'Trống' AND MaLoaiPhong = N'" + loaiphong + "'";
-            return db.ExecuteQueryDataSet (sql,CommandType.Text);          
-        }
-
-       
-
-        public DataTable LayPhongtrong_MaKV_TenP(string makv, string tenphong)
-        {
-            string sql = "SELECT * FROM Phong " +
-             "WHERE MaKhuVuc = N'" + makv + "' AND TrangThai = N'Trống' AND TenPhong = N'" + tenphong + "'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-           
-        }
-
-        public DataTable LayPhong_MaP(string maphong)
-        {
-            string sql = "SELECT TenPhong, TenLoaiPhong, DienTich, GiaThue, DiaChi " +
-                         "FROM LayThongTinPhong" +
-                         "('"+maphong +"')";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-           
-        }
 
         public DataTable Layphong_TT_MaKV(string trangthai,string makt)
         {
@@ -79,13 +36,6 @@ namespace QuanLyNhaTro.BS_layer
                  "(N'"+trangthai +"', '"+makt+"')";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
-        }
-        public bool UpdateTrangThai(string maphong,string trangthai ) 
-        {
-            string sqlString = "Update Phong  Set TrangThai=N'" +
-                                trangthai + "' Where MaPhong =N'" + maphong + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-           
         }
 
         public bool ThemPhongTro(string makhutro, string tenphong,string maloaiphong)
@@ -112,29 +62,6 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "Exec DeletePhongTro "
                 + " @MaPhong ='" + maphong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-
-        public DataTable LayPhongChuaLapHD(string makv, int  thismonth , int  thisyear ) 
-        {
-            string sql = "SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu Where MONTH(NgayLap)="
-                + thismonth + " AND YEAR(NgayLap)=" + thisyear + ") AND TrangThai=N'Đã thuê' AND MaKhuVuc='" + makv + "'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-            
-            
-        }
-        public DataTable LayMaPhong(string tenphong, string Makv)
-        {
-            string sql = "select MaPhong from Phong where TenPhong =N'" + tenphong + "' and MaKhuVuc = N'" + Makv + "'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-           
-        }
-
-        public DataTable LayP_dathue_TTThue(string maphong)
-        {
-            string sql = "Select p.MaPhong,p.TenPhong,tp.NgayThue from Phong as p join ThongTinThuePhong as tp on tp.MaPhong = p.MaPhong "+
-                           "where p.MaPhong = N'"+maphong+"' and p.TrangThai =N'Đã thuê'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-            
         }
 
         public DataTable LayPhongDaThue_MaKV_LP(string makv, string loaiphong)
@@ -172,6 +99,91 @@ namespace QuanLyNhaTro.BS_layer
             }
             return null;
 
+        }
+        public DataTable ViewChuaTaoPhieuThu()
+        {
+            string sql = "select * from ViewChuaTaoPhieuThu";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+        //Dùng 
+        public DataTable LayPhongChuaLapHD(string makv, int thismonth, int thisyear)
+        {
+            string sql = "select * from GetPhongChuaThu( '" + makv + "' , '" + thismonth + "' , '" + thisyear + "' ) ";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+
+        //Dùng 
+        public DataTable LayMaPhong(string tenphong, string Makv)
+        {
+            string sql = "select * from LayMaPhong_TenP_MaKtro('" + tenphong + "' , '" + Makv + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+
+        //Dùng
+        public DataTable LayP_dathue_TTThue(string maphong) 
+        {
+            string sql = "select * from LayThongTinPhong_Ngaythue('" + maphong + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+        //Dùng 
+        public bool UpdateTrangThai(string maphong, string trangthai)
+        {
+            string sqlString = "exec UpdateTTPhongTro @MaPhong='" + maphong + "',@TrangThai =N'" + trangthai + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+
+        }
+        //Dùng 
+        public DataTable LayLoaiPhong()
+        {
+            string sql = "Select * from ViewThongTinLoaiPhong ";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+
+        //Dùng 
+        public DataTable LayPhongtrong(string makv, string loaiphong)
+        {
+            string sql = "select * from LayPhongTrongMaKV_LP( '" + makv + "','" + loaiphong + "' )";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+
+
+        //Dùng 
+        public DataTable LayPhongtrong_MaKV_TenP(string makv, string tenphong)
+        {
+            string sql = "SELECT * from LayPhongTrongTheoTenP_MaKTro( '" + makv + "', '" + tenphong + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+
+        //Dùng 
+        public DataTable LayPhong_MaP(string maphong)
+        {
+            string sql = "select * from LayPhongTrong_MaP('" + maphong + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+        public DataTable LayPhongtrong(string makv)
+        {
+            string sql = "SELECT * from LocPhongTheoKhuTro('" + makv + "')";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+        }
+
+        public DataTable LayPhongtrong_gia(string dongia)
+        {
+            string sql = "select * from  LocPhongTheoGia(" + dongia + ")";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+
+
+        public DataTable LayPhongtrong_dientich(string dientich)
+        {
+            string sql = "select * from  LocPhongTheoGia(" + dientich + ")";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
     }
 }

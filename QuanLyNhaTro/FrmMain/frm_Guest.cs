@@ -107,9 +107,10 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnDsNgThue_Click(object sender, EventArgs e)
         {
-            frm_TKNgThue dsnt= new frm_TKNgThue();
-            dsnt.Show();
-            
+            string maPhong = bLPhong.LayMaPhongBangMaKT(MaKT);
+            DichVuGuest dvg = new DichVuGuest(maPhong);
+            addNewTab("Dịch vụ", dvg, 11);
+
         }
 
         private void btnTrangThai_Click(object sender, EventArgs e)
@@ -163,7 +164,7 @@ namespace QuanLyNhaTro.FrmMain
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
-            frmChangePass frmChangePass = new frmChangePass(userName,MaKT);
+            frmThayDoiMK_Khach frmChangePass = new frmThayDoiMK_Khach(userName,MaKT);
             frmChangePass.ShowDialog();
         }
 
@@ -202,29 +203,7 @@ namespace QuanLyNhaTro.FrmMain
             this.Close();
         }
 
-        private void btn_DsPhong_Click(object sender, EventArgs e)
-        {
-            FormReportDSPhong formReportDSPhong = new FormReportDSPhong();
-            formReportDSPhong.ShowDialog(); 
-        }
-
-        private void btn_DoanhThu_Click(object sender, EventArgs e)
-        {
-            FormReportDoanhThuThang formDthu = new FormReportDoanhThuThang();
-            formDthu.ShowDialog();  
-        }
-
-        private void btn_DsDichVu_Click(object sender, EventArgs e)
-        {
-            FormReportDichVu form = new FormReportDichVu();
-            form.ShowDialog();
-        }
-
-        private void btn_DsLoaiPhong_Click(object sender, EventArgs e)
-        {
-            FormReportLoaiPhong form = new FormReportLoaiPhong();
-            form.ShowDialog();
-        }
+ 
 
         private void buttonX1_Click(object sender, EventArgs e)
         {

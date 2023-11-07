@@ -1089,11 +1089,6 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Doa
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.ChoThue.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.Dsthutien.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Guest.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmDangKyPhong.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FormReportDichVu.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FormReportDoanhThuThang.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FormReportDSPhong.resources
-C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FormReportLoaiPhong.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmChangePass.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\MotelRoomManagement.frm_Information.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Admin.resources
@@ -1115,3 +1110,9 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csp
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.CopyComplete
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.exe
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.pdb
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmHopDong.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmSuDungDichVu.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmThayDoiMK_Khach.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DichVuGuest.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TaoPhieuChi.resources
+C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_DangKyPhong.resources

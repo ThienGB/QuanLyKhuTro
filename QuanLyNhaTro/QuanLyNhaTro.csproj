@@ -94,14 +94,58 @@
     </Compile>
     <Compile Include="BS layer\BLDangNhap.cs" />
     <Compile Include="BS layer\BLDichVu.cs" />
+    <Compile Include="BS layer\BLHopDong.cs" />
     <Compile Include="BS layer\BLKhuVuc.cs" />
     <Compile Include="BS layer\BLLoaiPhong.cs" />
+    <Compile Include="BS layer\BLPhieuChi.cs" />
     <Compile Include="BS layer\BLPhieuThu.cs" />
     <Compile Include="BS layer\BLPhong.cs" />
     <Compile Include="BS layer\BLTTDkiPhong.cs" />
     <Compile Include="BS layer\BLTTKhach.cs" />
     <Compile Include="BS layer\BLTTThuePhong.cs" />
+    <Compile Include="ChoThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChoThue.designer.cs">
+      <DependentUpon>ChoThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="DichVuGuest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DichVuGuest.designer.cs">
+      <DependentUpon>DichVuGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dsthutien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dsthutien.designer.cs">
+      <DependentUpon>Dsthutien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmHopDong.designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuDungDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSuDungDichVu.designer.cs">
+      <DependentUpon>frmSuDungDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThayDoiMK_Khach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThayDoiMK_Khach.designer.cs">
+      <DependentUpon>frmThayDoiMK_Khach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangKyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangKyPhong.designer.cs">
+      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XemTienPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,53 +176,11 @@
     <Compile Include="DoanhThu.Designer.cs">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChoThue.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ChoThue.Designer.cs">
-      <DependentUpon>ChoThue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dsthutien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Dsthutien.Designer.cs">
-      <DependentUpon>Dsthutien.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain\frm_Guest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain\frm_Guest.Designer.cs">
       <DependentUpon>frm_Guest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_DangKyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_DangKyPhong.Designer.cs">
-      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReportDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportDichVu.designer.cs">
-      <DependentUpon>FormReportDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReportDoanhThuThang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportDoanhThuThang.designer.cs">
-      <DependentUpon>FormReportDoanhThuThang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReportDSPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportDSPhong.designer.cs">
-      <DependentUpon>FormReportDSPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormReportLoaiPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReportLoaiPhong.designer.cs">
-      <DependentUpon>FormReportLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChangePass.cs">
       <SubType>Form</SubType>
@@ -231,6 +233,12 @@
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TaoPhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaoPhieuChi.designer.cs">
+      <DependentUpon>TaoPhieuChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemKV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,7 +248,7 @@
     <Compile Include="ThemNguoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThemNguoi.Designer.cs">
+    <Compile Include="ThemNguoi.designer.cs">
       <DependentUpon>ThemNguoi.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemTK.cs">
@@ -260,7 +268,7 @@
     <Compile Include="TinhTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TinhTien.Designer.cs">
+    <Compile Include="TinhTien.designer.cs">
       <DependentUpon>TinhTien.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangThai.cs">
@@ -284,6 +292,27 @@
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChoThue.resx">
+      <DependentUpon>ChoThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVuGuest.resx">
+      <DependentUpon>DichVuGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dsthutien.resx">
+      <DependentUpon>Dsthutien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuDungDichVu.resx">
+      <DependentUpon>frmSuDungDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThayDoiMK_Khach.resx">
+      <DependentUpon>frmThayDoiMK_Khach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangKyPhong.resx">
+      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login Guest.resx">
       <DependentUpon>frm_Login Guest.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,29 +328,8 @@
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChoThue.resx">
-      <DependentUpon>ChoThue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dsthutien.resx">
-      <DependentUpon>Dsthutien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain\frm_Guest.resx">
       <DependentUpon>frm_Guest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_DangKyPhong.resx">
-      <DependentUpon>frm_DangKyPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReportDichVu.resx">
-      <DependentUpon>FormReportDichVu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReportDoanhThuThang.resx">
-      <DependentUpon>FormReportDoanhThuThang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReportDSPhong.resx">
-      <DependentUpon>FormReportDSPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReportLoaiPhong.resx">
-      <DependentUpon>FormReportLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePass.resx">
       <DependentUpon>frmChangePass.cs</DependentUpon>
@@ -356,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLLoaiPhong.resx">
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoPhieuChi.resx">
+      <DependentUpon>TaoPhieuChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemKV.resx">
       <DependentUpon>ThemKV.cs</DependentUpon>

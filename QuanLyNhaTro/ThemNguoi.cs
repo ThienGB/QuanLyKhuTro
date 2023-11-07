@@ -16,7 +16,6 @@ namespace QuanLyNhaTro
         string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu;
         DateTime ngaysinh;
         string makhach;
-        int tiendatcoc;
         BLKhuVuc dbKhuVuc = new BLKhuVuc();
         BLLoaiPhong dbLoaiPhong = new BLLoaiPhong();
         BLPhong dbPhong = new BLPhong();
@@ -37,15 +36,15 @@ namespace QuanLyNhaTro
         private void Load_CBKhuVuc()
         {
             var kv = dbKhuVuc.LayKhuVuc();
-            cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DisplayMember = "TenKhuVuc";
+            cbKhuVuc.ValueMember = "MaKhuTro";
+            cbKhuVuc.DisplayMember = "TenKhuTro";
             cbKhuVuc.DataSource = kv;
         }
 
         private void Load_CBLoaiPhong()
         {
             var lp = dbLoaiPhong.LayLoaiPhong();
-            cbChonPhong.ValueMember = "MaLoaiPhong";
+            cbChonPhong.ValueMember = "MaLP";
             cbChonPhong.DisplayMember = "TenLoaiPhong";
             cbChonPhong.DataSource = lp;
         }
@@ -54,6 +53,7 @@ namespace QuanLyNhaTro
         {
             string khuvuc = cbKhuVuc.SelectedValue.ToString();
             string loaiphong = cbChonPhong.SelectedValue.ToString();
+            textBox1.Text = khuvuc +" " + loaiphong;
             var phong = dbPhong.LayPhongDaThue_MaKV_LP(khuvuc, loaiphong);
             for (int i = 0; i < phong.Rows.Count; i++)
             {
@@ -62,6 +62,16 @@ namespace QuanLyNhaTro
                 item.ImageIndex = 0;
                 ListViewPhong.Items.Add(item);
             }
+        }
+
+        private void ListViewPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvKhachThue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,9 +115,9 @@ namespace QuanLyNhaTro
                 ListViewItem item = new ListViewItem(listkhach.Rows[i][0].ToString());
                 if (listkhach.Rows[i][2].ToString().Trim() == "Nam") item.ImageIndex = 3;
                 else item.ImageIndex = 2;
-                item.SubItems.Add(listkhach.Rows[i][1].ToString()+" "+ listkhach.Rows[i][2].ToString());
-                item.SubItems.Add(listkhach.Rows[i][4].ToString());
-                item.SubItems.Add(listkhach.Rows[i][6].ToString());
+                item.SubItems.Add(listkhach.Rows[i][1].ToString());
+                item.SubItems.Add(listkhach.Rows[i][3].ToString());
+                item.SubItems.Add(listkhach.Rows[i][5].ToString());
                 lvKhachThue.Items.Add(item);
             }
             lblSoNguoi.Text = listkhach.Rows.Count.ToString();
@@ -138,8 +148,6 @@ namespace QuanLyNhaTro
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            makhach = dbKhach.LayIDMoi();
-
             //Lay thong tin bang ThongTinKhach
             ho = txtHo.Text.Trim();
             ten = txtTen.Text.Trim();
@@ -152,16 +160,12 @@ namespace QuanLyNhaTro
             quequan = txtQueQuan.Text.Trim();
             nghenghiep = txtNgheNghiep.Text.Trim();
             maphong = lblMaPhong.Text.Trim();
-            ghichu = "1";
-            tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
             BLTTThuePhong dbThuePhong = new BLTTThuePhong();
-            string idtttp = dbThuePhong.LayIDMoi().ToString();
             DateTime ngaythue = dtpNgayThue.Value;
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               // dbKhach.ThemKhach(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
-                dbThuePhong.ThemThongTinThue(idtttp, makhach, maphong, ngaythue, tiendatcoc);
+                dbKhach.ThemKhach( ho+" "+ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong);
                 //Refresh Form
                 ListViewPhong.Items.Clear();
                 Load_ListViewPhong();
