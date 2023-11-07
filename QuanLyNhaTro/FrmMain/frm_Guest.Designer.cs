@@ -37,6 +37,7 @@
             this.btnThemNguoi = new DevComponents.DotNetBar.ButtonItem();
             this.btnTraPhong = new DevComponents.DotNetBar.ButtonItem();
             this.btnTinhTien = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnTrangThai = new DevComponents.DotNetBar.ButtonItem();
             this.btnDsThuTien = new DevComponents.DotNetBar.ButtonItem();
@@ -93,7 +94,7 @@
             this.numRent = new System.Windows.Forms.Label();
             this.numTrong = new System.Windows.Forms.Label();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -159,7 +160,8 @@
             this.btnThemNguoi,
             this.btnTraPhong,
             this.btnTinhTien,
-            this.buttonItem5});
+            this.buttonItem5,
+            this.buttonItem6});
             this.ribbonBar3.Location = new System.Drawing.Point(312, 0);
             this.ribbonBar3.Name = "ribbonBar3";
             this.ribbonBar3.Size = new System.Drawing.Size(666, 197);
@@ -222,6 +224,20 @@
             this.btnTinhTien.SubItemsExpandWidth = 14;
             this.btnTinhTien.Text = "Tính tiền phòng ";
             this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.HoverImage = global::QuanLyNhaTro.Properties.Resources.sign_check_icon;
+            this.buttonItem5.Image = global::QuanLyNhaTro.Properties.Resources.calculator;
+            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(55, 55);
+            this.buttonItem5.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Default;
+            this.buttonItem5.ImagePaddingHorizontal = 50;
+            this.buttonItem5.ImagePaddingVertical = 20;
+            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.SubItemsExpandWidth = 14;
+            this.buttonItem5.Text = "Hợp đồng";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
             // 
             // ribbonBar1
             // 
@@ -833,9 +849,9 @@
             this.groupBox5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.Blue;
             this.groupBox5.Location = new System.Drawing.Point(4, 351);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(274, 366);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
@@ -925,19 +941,19 @@
             this.buttonItem4.SubItemsExpandWidth = 14;
             this.buttonItem4.Text = "Danh sách người thuê ";
             // 
-            // buttonItem5
+            // buttonItem6
             // 
-            this.buttonItem5.HoverImage = global::QuanLyNhaTro.Properties.Resources.sign_check_icon;
-            this.buttonItem5.Image = global::QuanLyNhaTro.Properties.Resources.calculator;
-            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(55, 55);
-            this.buttonItem5.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Default;
-            this.buttonItem5.ImagePaddingHorizontal = 50;
-            this.buttonItem5.ImagePaddingVertical = 20;
-            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.SubItemsExpandWidth = 14;
-            this.buttonItem5.Text = "Hợp đồng";
-            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            this.buttonItem6.HoverImage = global::QuanLyNhaTro.Properties.Resources.sign_check_icon;
+            this.buttonItem6.Image = global::QuanLyNhaTro.Properties.Resources.calculator;
+            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(55, 55);
+            this.buttonItem6.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Default;
+            this.buttonItem6.ImagePaddingHorizontal = 50;
+            this.buttonItem6.ImagePaddingVertical = 20;
+            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.SubItemsExpandWidth = 14;
+            this.buttonItem6.Text = "DICHVU";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
             // 
             // frm_Guest
             // 
@@ -1038,5 +1054,6 @@
         private DevComponents.DotNetBar.ButtonItem btn_DsLoaiPhong;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem6;
     }
 }

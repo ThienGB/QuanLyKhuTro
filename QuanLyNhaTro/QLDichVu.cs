@@ -22,24 +22,7 @@ namespace QuanLyNhaTro
         }
         void LoadData()
         {
-            try
-            {
-                dgvQLDV.DataSource = dbDV.LayThongTinDichVu();
-                /*dgvQLDV.AutoResizeColumns();*/
-                this.txtID.ResetText();
-                this.txtTDV.ResetText();
-                this.txtDG.ResetText();
-                this.btnLuu.Enabled = false;
-                this.btnHuy.Enabled = false;
-                this.btnThem.Enabled = true;
-                this.btnSua.Enabled = true;
-                this.btnXoa.Enabled = true;
-                dgvQLDV_CellClick(null, null);
-            }
-            catch
-            {
-                MessageBox.Show("Không lấy được nội dung trong table DichVu. Lỗi rồi!!!");
-            }
+           
         }
 
         private void QLDichVu_Load(object sender, EventArgs e)

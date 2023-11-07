@@ -141,6 +141,18 @@ namespace QuanLyNhaTro.BS_layer
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
         }
+        public string LayMaPhongBangMaKT(string MaKT)
+        {
+            string sql = "select Maphong From LayPhongBangMaKT ('" + MaKT + "')";
+            var table = db.ExecuteQueryDataSet(sql, CommandType.Text);
+            int row = table.Rows.Count;
+            if (row != 0)
+            {
+                return table.Rows[0][0].ToString();
+            }
+            return null;
+
+        }
     }
 }
 

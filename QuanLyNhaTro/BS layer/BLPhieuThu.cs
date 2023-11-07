@@ -118,7 +118,23 @@ namespace QuanLyNhaTro.BS_layer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
            
         }
+        //phuong
 
-        
+        public DataTable ViewChuaDongTien()
+        {
+            string sql = "SELECT * from  ViewChuaDongTien";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataTable ViewChuaDongTien_MaPT(string mapt)
+        {
+            string sql = "SELECT * from  ViewChuaDongTien where Mapt='"+mapt+"'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+        public DataTable CapNhapPT_MaPT(string mapt)
+        {
+            string sql = "exec TTPTDaDong  @MaPT= '" + mapt + "'";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        }
+
     }
 }

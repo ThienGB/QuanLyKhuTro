@@ -24,13 +24,42 @@ namespace QuanLyNhaTro.BS_layer
             string sql = "SELECT Id, TenDichVu, Gia FROM DichVu WHERE TenDichVu = N'" + TenDV + "'";
                 return db.ExecuteQueryDataSet(sql, CommandType.Text);           
         }
-
-        public DataTable LayThongTinDichVu()
+        //phương
+        public DataTable ViewSuDungDichVu()
         {
-            string sql = "SELECT ID, TenDichVu, Gia FROM DichVu";       
+            string sql = "SELECT * from ViewSuDungDichVu  ";       
             return db.ExecuteQueryDataSet(sql, CommandType.Text); 
             
            
+        }  
+        public DataTable DeleteSuDungDichVu(string madv,string maphong )
+        {
+            string sql = " DeleteSuDungDichVu @MaDV='"+ madv+"',@MaPhong='"+maphong+"'\r\n ";       
+            return db.ExecuteQueryDataSet(sql, CommandType.Text); 
+            
+           
+        } 
+        public DataTable InsertSuDungDichVu(string madv,string maphong,string soluong )
+        {
+            string sql = " InsertSuDungDichVu   @MaDV='" + madv + "',@MaPhong='" + maphong + "', @SoLuong=" + soluong + "\r\n ";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text); 
+            
+           
+        } 
+        public DataTable UpdateSuDungDichVu(string madv,string maphong,string soluong )
+        {
+            string sql = " UpdateSuDungDichVu   @MaDV='" + madv+"',@MaPhong='"+maphong+ "', @SoLuong="+soluong+"\r\n ";       
+            return db.ExecuteQueryDataSet(sql, CommandType.Text); 
+            
+           
+        }
+        //hehehehe
+        public DataTable LaySDDichVu(string maphong)
+        {
+            string sql = "SELECT * from SuDungDichVu_TheoPhong('" + maphong+"') ";
+            return db.ExecuteQueryDataSet(sql, CommandType.Text);
+
+
         }
 
         public bool ThemDichVu(int ID, string TenDichVu, long Gia)

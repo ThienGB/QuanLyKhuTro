@@ -282,6 +282,13 @@ namespace QuanLyNhaTro.FrmMain
             addNewTab("Hợp đồng", form, 12);
         }
 
+        private void buttonItem6_Click(object sender, EventArgs e)
+        {
+            frmSuDungDichVu form = new frmSuDungDichVu();
+            addNewTab("Dich vu", form, 13);
+
+        }
+
         private void buttonX1_Click(object sender, EventArgs e)
         {
             AccountInformation accountInformation = new AccountInformation(userName,PASS);
