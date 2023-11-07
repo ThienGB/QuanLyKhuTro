@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,7 @@ namespace QuanLyNhaTro
         BLTTKhach dbttkhach = new BLTTKhach();
         BLDichVu dbdv = new BLDichVu();
         BLPhieuThu dbpt = new BLPhieuThu();
-        private int tiennha, tiendien, tiennuoc, tiennuoc2, tongtien;
+        private int  tiendien, tiennuoc2;
         public TinhTien()
         {
             InitializeComponent();
@@ -29,13 +30,14 @@ namespace QuanLyNhaTro
             
             Load_CBKV();
             lvPhong.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            txtMoiTruong.Enabled = true;
         }
 
         private void Load_CBKV()
         {
             var kv = dbkv.LayKhuVuc();
-            cbKhuVuc.ValueMember = "MaKhuVuc";
-            cbKhuVuc.DisplayMember = "TenKhuVuc";
+            cbKhuVuc.ValueMember = "MaKhuTro";
+            cbKhuVuc.DisplayMember = "TenKhuTro";
             cbKhuVuc.DataSource = kv;
         }
 
@@ -86,16 +88,13 @@ namespace QuanLyNhaTro
             //combobox Ten Chu Thue
             txtSoluong.Text = khach.Rows.Count.ToString();
             cbMaKhachThue.DisplayMember = "HoTen";
-            cbMaKhachThue.ValueMember = "MaKhachTro";
+            cbMaKhachThue.ValueMember = "MaKT";
             cbMaKhachThue.DataSource = khach;
 
             //Load Thong Tin Dich Vu
             var dichvu = dbphong.LayPhong_MaP(maphong);
 
-            txtLoaiPhong.Text = dichvu.Rows[0][1].ToString();
-            tiennha = Convert.ToInt32(dichvu.Rows[0][3].ToString());
-            string gia = string.Format("{0:#,##0}", Int32.Parse(dichvu.Rows[0][3].ToString()));
-            txtTienNha.Text = gia;
+            
         }
 
         private void cbMaKhachThue_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,35 +104,13 @@ namespace QuanLyNhaTro
             var thongtinkhach = dbttkhach.LayThongTinKhachQuaID(makhach);
 
             txtCMND.Text = thongtinkhach.Rows[0][6].ToString();
-            txtNN.Text = thongtinkhach.Rows[0][8].ToString();
-            txtNS.Text = thongtinkhach.Rows[0][7   ].ToString();
+            txtNN.Text = thongtinkhach.Rows[0][4].ToString();
+            txtNS.Text = thongtinkhach.Rows[0][5].ToString();
         }
 
-        private void rdNuoc_CheckedChanged(object sender, EventArgs e)
-        {
-            pSoNguoi.Visible = false;
-        }
+        
 
-        private void rdSoNguoi_CheckedChanged(object sender, EventArgs e)
-        {
-
-            pSoNguoi.Visible = true;
-            if (rdSoNguoi.Checked)
-            {
-                int songuoi = 0;
-                //Load tien dich vu
-                var dichvu = dbdv.LoadTienDichVu("Nước_2");
-                txtSoNguoi.Text = txtSoluong.Text;
-                string str_songuoi = txtSoNguoi.Text;
-                int gia = Convert.ToInt32(dichvu.Rows[0][2].ToString());
-                if (txtSoNguoi.Text != "")
-                    songuoi = Convert.ToInt32(str_songuoi);
-                //Tinh
-                tiennuoc = songuoi * gia;
-                //Xuat
-                txtTienNuoc2.Text = string.Format("{0:#,##0}", Int32.Parse(tiennuoc.ToString()));
-            }
-        }
+       
 
         private void Dien_cbSoKi_CheckedChanged(object sender, EventArgs e)
         {
@@ -156,7 +133,7 @@ namespace QuanLyNhaTro
             int soki = 0;
             //Load tien dich vu
             
-            var dichvu = dbdv.LoadTienDichVu("Điện");
+            var dichvu = dbdv.LoadTienDichVu("sonuoc");
             string str_soki = txtSoKi.Text;
             int gia = Convert.ToInt32(dichvu.Rows[0][2].ToString());
             if (txtSoKi.Text != "")
@@ -164,10 +141,19 @@ namespace QuanLyNhaTro
             //Tinh
             tiendien = soki * gia;
             //Xuat
-            txtTienDien2.Text = string.Format("{0:#,##0}", Int32.Parse(tiendien.ToString()));
+            txtDien.Text = string.Format("{0:#,##0}", Int32.Parse(tiendien.ToString()));
+        }
+
+        private void dtLapHoaDon_ValueChanged(object sender, EventArgs e)
+        {
 
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+            Load_CBKV();
+        }
 
         private void lvPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -178,7 +164,7 @@ namespace QuanLyNhaTro
         {
             int sokhoi = 0;
             //Load tien dich vu
-            var dichvu = dbdv.LoadTienDichVu("Nước");
+            var dichvu = dbdv.LoadTienDichVu("sodien");
             string str_sokhoi = txtSoKhoi.Text;
             int gia = Convert.ToInt32(dichvu.Rows[0][2].ToString());
             if (txtSoKhoi.Text != "")
@@ -186,60 +172,38 @@ namespace QuanLyNhaTro
             //Tinh            
             tiennuoc2 = sokhoi * gia;
             //Xuat
-            txtTienNuoc.Text = string.Format("{0:#,##0}", Int32.Parse(tiennuoc2.ToString()));
+            txtNuoc.Text = string.Format("{0:#,##0}", Int32.Parse(tiennuoc2.ToString()));
         }
 
         private void btnTinh_Click(object sender, EventArgs e)
         {
-            if (rdNuoc.Checked)
-            {
-                tongtien = tiennha + tiendien + tiennuoc2;
-                txtTongCong.Text = string.Format("{0:#,##0}", Int32.Parse(tongtien.ToString())) + " vnd";
-            }
-            else
-            {
-                tongtien = tiennha + tiendien + tiennuoc;
-                txtTongCong.Text = string.Format("{0:#,##0}", Int32.Parse(tongtien.ToString())) + " vnd";
-            }
-        }
-
-        private void btnLuuHoaDon_Click(object sender, EventArgs e)
-        {
-            //Lay du lieu bang phieu thu
-            double idPT = dbpt.LayIDMoi();
-            string maphong = txtMaPhong.Text;
             DateTime ngaylap = dtLapHoaDon.Value;
-            DateTime ngaythu = DateTime.MinValue; 
             int sokidien = Convert.ToInt32(txtSoKi.Text);
-            int PT_tiennuoc, sokhoinuoc;
-            if (rdNuoc.Checked)
-            {
-                sokhoinuoc = Convert.ToInt32(txtSoKhoi.Text);
-                PT_tiennuoc = tiennuoc2;
-            }
-            else
-            {
-                sokhoinuoc = 0;
-                PT_tiennuoc = tiennuoc;
-            }
-
-            //Xac Nhan
-            if (MessageBox.Show("Thời gian lập hóa đơn: \n" + ngaylap.ToString() + "\nMã Phòng: " + maphong, "Xác nhận lập hóa đơn: " + idPT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            int sonuoc = Convert.ToInt32(txtSoKhoi.Text);
+            int phiMT= Convert.ToInt32(txtMoiTruong.Text);
+            string maphong = txtMaPhong.Text;
+            if (MessageBox.Show("Thời gian lập hóa đơn: \n" + ngaylap.ToString() + "\nMã Phòng: " + maphong, "Xác nhận lập hóa đơn: " , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Insert vao bang phieu thu
-                bool i = dbpt.ThemPhieuThu(idPT, maphong, ngaylap, ngaythu, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien);
+                bool i = dbpt.ThemPhieuThu(maphong,phiMT,sokidien,sonuoc);
                 if (i == true)
                     MessageBox.Show("Lập hóa đơn thành công");
-                
-
             }
-            //Refresh
-            load_phong();
-            ClearAll();
+            var pt = dbpt.LayPhieuThuTheoMaPhong(maphong);
+            txt_TienDien.Text=string.Format("{0:#,##0}", txtDien.Text);
+            txtTienMT.Text =  string.Format("{0:#,##0}", txtMoiTruong.Text);
+            txtTienNuoc.Text =  string.Format("{0:#,##0}", txtNuoc.Text);
+            txtTienNha.Text =   string.Format("{0:#,##0}", pt.Rows[0][7].ToString());
+            txtTongCong.Text= string.Format("{0:#,##0}", pt.Rows[0][8].ToString());
+            txtTienDV.Text = string.Format("{0:#,##0}", pt.Rows[0][5].ToString());
         }
 
         private void ClearAll()
         {
+            txtTenPhong.Text = "";
+            txtTienNuoc.Text = "";
+            txtTienDV.Text = "";
+            txtTienMT.Text = "";
             txtMaPhong.Text = "";
             txtTenPhong.Text = "";
             dtNgayThue.Value = DateTime.Today;
@@ -248,13 +212,11 @@ namespace QuanLyNhaTro
             txtCMND.Text = "";
             txtNN.Text = "";
             txtNS.Text = "";
-            txtLoaiPhong.Text = "";
             txtTienNha.Text = "";
             txtSoKi.Text = "";
-            txtTienDien2.Text = "";
+            txtDien.Text = "";
             txtSoKhoi.Text = "";
-            txtTienNuoc.Text = ""; txtTienNuoc2.Text = ""; txtSoNguoi.Text = ""; txtTongCong.Text = "";
-            rdNuoc.Checked = true;
+            txtNuoc.Text = ""; txtTongCong.Text = "";
         }
     }
 }

@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>..\..\..\..\..\Program Files\Microsoft Visual Studio\DevComponents.DotNetBar2.dll</HintPath>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents\Zalo Received Files\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -101,7 +102,14 @@
     <Compile Include="BS layer\BLTTDkiPhong.cs" />
     <Compile Include="BS layer\BLTTKhach.cs" />
     <Compile Include="BS layer\BLTTThuePhong.cs" />
+    <Compile Include="BS layer\BLPhieuChi.cs" />
     <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="DichVuGuest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DichVuGuest.Designer.cs">
+      <DependentUpon>DichVuGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +157,12 @@
     </Compile>
     <Compile Include="frmChangePass.designer.cs">
       <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\frm_Khach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain\frm_Khach.Designer.cs">
+      <DependentUpon>frm_Khach.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Information.cs">
       <SubType>Form</SubType>
@@ -251,8 +265,17 @@
     <Compile Include="ThemPhong.Designer.cs">
       <DependentUpon>ThemPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaoPhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaoPhieuChi.Designer.cs">
+      <DependentUpon>TaoPhieuChi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVuGuest.resx">
+      <DependentUpon>DichVuGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu.resx">
       <DependentUpon>DoanhThu.cs</DependentUpon>
@@ -277,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePass.resx">
       <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain\frm_Khach.resx">
+      <DependentUpon>frm_Khach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Information.resx">
       <DependentUpon>frm_Information.cs</DependentUpon>
@@ -339,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTraPhong.resx">
       <DependentUpon>frmTraPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoPhieuChi.resx">
+      <DependentUpon>TaoPhieuChi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

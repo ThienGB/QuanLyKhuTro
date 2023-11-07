@@ -35,10 +35,10 @@ namespace QuanLyNhaTro.BS_layer
             return id;
         }
 
-        public bool ThemThongTinThue(string idtttp, string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
+        //Dùng 
+        public bool ThemThongTinThue( string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
         {
-            string sqlString = "INSERT INTO ThongTinThuePhong VALUES ('" + idtttp + "', '" + makhach + "', '" +
-                maphong + "', '" + ngaythue + "', '" + tiendatcoc + "', 'null'" + ")";
+            string sqlString = "exec InsertHopDong @MaKT='"+makhach+"', @MaPhong='"+maphong+"' ,@TienDatCoc ="+tiendatcoc+",@NgayBatDau='"+ngaythue+"'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 

@@ -9,48 +9,53 @@ using QuanLyNhaTro.DB_layer;
 
 namespace QuanLyNhaTro.BS_layer
 {
-    
+
     class BLLoaiPhong
     {
         DBMain db = null;
         string err;
-        public BLLoaiPhong() 
+        public BLLoaiPhong()
         {
             db = new DBMain();
         }
+
+        //Dùng 
         public DataTable LayLoaiPhong()
         {
-            
-            return db.ExecuteQueryDataSet("select * from LoaiPhong ", CommandType.Text);
-            
+            return db.ExecuteQueryDataSet("select * from viewThongTinLoaiPhong ", CommandType.Text);
         }
 
-        public bool ThemLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
+        public bool ThemLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, int DienTich, int DonGia)
         {
-            string sqlString = "Insert Into LoaiPhong Values(" + "'" +
+            string sqlString = "Insert Into THONG_TIN_LOAI_PHONG Values(" + "'" +
                                      MaLoaiPhong + "',N'" +
-                                     TenLoaiPhong+ "',N'"+
+                                     TenLoaiPhong + "',N'" +
                                      DienTich + "'," +
-                                     DonGia + ",N'" +
-                                     GhiChu + "')";
+                                     DonGia + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-            
+
         }
         public bool XoaLoaiPhong(string MaLoaiPhong)
         {
-            string sqlString = "Delete From LoaiPhong Where MaLoaiPhong ='" + MaLoaiPhong + "'";
+            string sqlString = "Delete From THONG_TIN_LOAI_PHONG Where MaLP ='" + MaLoaiPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-           
+
         }
-        public bool CapNhatLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
+        public bool CapNhatLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, int DienTich, int DonGia)
         {
-            string sqlString = "Update LoaiPhong Set TenLoaiPhong=N'" +
-                                TenLoaiPhong + 
-                                "',DienTich '"+ DienTich + 
-                                "',DonGia "+ DonGia + 
-                                " Where MaLoaiPhong='" + MaLoaiPhong + "'";
+            string sqlString = "exec UpdateThongTinLoaiPhong @MaLP = '" + MaLoaiPhong + "', @DienTich=" + DienTich + ",@GiaThue=" + DonGia + ", @TenLoaiPhong=N'" + TenLoaiPhong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-            
+
+        }
+
+        public DataTable LayGiaPhong()
+        {
+            return db.ExecuteQueryDataSet("SELECT DISTINCT GiaThue FROM THONG_TIN_LOAI_PHONG", CommandType.Text);
+        }
+
+        public DataTable LayDienTich()
+        {
+            return db.ExecuteQueryDataSet("SELECT DISTINCT DienTich  FROM THONG_TIN_LOAI_PHONG", CommandType.Text);
         }
     }
 }

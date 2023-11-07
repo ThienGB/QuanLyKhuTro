@@ -19,7 +19,9 @@ namespace QuanLyNhaTro.FrmMain
         BLTTDkiPhong bLTTDkiPhong = new BLTTDkiPhong();
         BLTTKhach bLTTKhach = new BLTTKhach();
         BLTTThuePhong bLTTThuePhong = new BLTTThuePhong();
+        BLDangNhap blTaiKhoan= new BLDangNhap();
 
+        string madon;
         int kiemtra;
         private int tiendatcoc;
         public ChoThue()
@@ -38,8 +40,8 @@ namespace QuanLyNhaTro.FrmMain
         public void Load_CB_KV()
         {
             //Load ComboBox Khu Vuc
-            cbKhuVuc.DisplayMember = "TenKhuVuc";
-            cbKhuVuc.ValueMember = "MaKhuVuc";
+            cbKhuVuc.DisplayMember = "TenKhuTro";
+            cbKhuVuc.ValueMember = "MaKhuTro";
             cbKhuVuc.DataSource = bLKhuVuc.LayKhuVuc();
         }
 
@@ -53,7 +55,7 @@ namespace QuanLyNhaTro.FrmMain
         private void Load_CBLoaiPhong()
         {
             var loaiphong = bLPhong.LayLoaiPhong();
-            cbChonPhong.ValueMember = "MaLoaiPhong";
+            cbChonPhong.ValueMember = "MaLP";
             cbChonPhong.DisplayMember = "TenLoaiPhong";
             cbChonPhong.DataSource = loaiphong;
         }
@@ -115,79 +117,60 @@ namespace QuanLyNhaTro.FrmMain
         {
             try
             {
-                string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu, makhach;
+                string hoten, gioitinh, cmnd, quequan, nghenghiep, maphong, makhach;
                 DateTime ngaysinh;
                 //Sinh Ma Khach moi
                 
-                makhach = bLTTKhach.LayIDMoi();
                 //Lay thong tin bang ThongTinKhach
-                ho = txtHo.Text.Trim();
-                ten = txtTen.Text.Trim();
+                hoten = txtHo.Text.Trim();
                 ngaysinh = dtpNgaySinh.Value;
                 gioitinh = cbGioiTinh.SelectedItem.ToString();
                 cmnd = txtCMND.Text.Trim();
                 quequan = txtQueQuan.Text.Trim();
                 nghenghiep = txtNgheNghiep.Text.Trim();
                 maphong = lblMaphong.Text.Trim();
-                ghichu = "1";
-                List<string> tmp = new List<string>();
-                tmp.Add(ho);
-                tmp.Add(ten);
-                tmp.Add(gioitinh);
-                tmp.Add(nghenghiep);
-                tmp.Add(quequan);
-                tmp.Add(cmnd);
-                tmp.Add(txtTienDatCoc.Text);
-                foreach (string chuoi in tmp)
+                tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
+               
+               
                 {
-                    if (chuoi == "")
+                    if (MessageBox.Show("Bạn có muốn lưu?", "Khách "+hoten , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        kiemtra = 1;
-                    }
-                }
-                if (kiemtra == 1)
-                {
-                    MessageBox.Show("Quý khách phải nhập đủ thông tin!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        //Them vao bang ThongTinKhach               
-                        bool themKhach = bLTTKhach.ThemKhach(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
-                        if (themKhach)
+                        if (rdnTuNhap.Checked)
                         {
-                            //Them vao bang ThongTinThuePhong
-                            //Lay thong tin
-                            string idtttp = bLTTThuePhong.LayIDMoi().ToString();
-                            string select_maphong = lblMaphong.Text;
-                            DateTime ngaythue = dtpNgayThue.Value;
-                            tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
+                            bLTTKhach.ThemKhach( hoten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong);
 
-                            //INSERT vao bang
-                            bool themTTThue = bLTTThuePhong.ThemThongTinThue(idtttp, makhach, maphong, ngaythue, tiendatcoc);
+                            DataTable Kt= bLTTKhach.LayMaKT_CMND(cmnd);
+                            string makt = Kt.Rows[0][0].ToString();
+                            //Thêm vào HOP_DONG 
+                            bLTTThuePhong.ThemThongTinThue(makt,maphong,DateTime.Now,tiendatcoc);
 
-                            //Cap nhat trang thai phong
-                            bLPhong.UpdateTrangThai(select_maphong, "Đã thuê");
+                            //Thêm vào Tai_KHOAN
 
+                            blTaiKhoan.InsertTaiKhoan(cmnd, maphong,makt);
+                            //Cập nhật lại PHONG_TRO 
+                            bLPhong.UpdateTrangThai(maphong,"Đã thuê");
 
-                            //Xoa Khach tu DS Dang Ky
-                            if (radDSDK.Checked == true)
-                            {
-                                ListViewItem item = listKDK.SelectedItems[0];
-                                int id_kdk = Convert.ToInt32(item.Text);
-                                bool xoa = bLTTDkiPhong.Xoa(id_kdk);
-                            }
-
-
+                            lvPhong.Items.Clear();
+                            LoadData_ListPhong();
+                            Load_ListKDK();
+                            MessageBox.Show("Đã thêm thành công!     Tài khoản :"+cmnd+ "     Mật khẩu : "+ maphong);
+                        }            
+                        
+                        else if (radDSDK.Checked)
+                        {
+                            textBox1.Text = madon;
+                            bLTTDkiPhong.updateTrangThaiDangKy(madon);
                             //Refresh Form
                             lvPhong.Items.Clear();
                             LoadData_ListPhong();
                             Load_ListKDK();
-                            MessageBox.Show("Đã thêm thành công!");
+                            MessageBox.Show("Đã thêm thành công!       Tài khoản: "+cmnd+ "     Mật khẩu: "+ maphong);
                         }
-                        else MessageBox.Show("Không thể thêm ");
+                        
+
+                       
                     }
+                    else MessageBox.Show("Không thể thêm ");
                 }
             }
             catch (FormatException)
@@ -201,7 +184,7 @@ namespace QuanLyNhaTro.FrmMain
         {
             dtpNgaySinh.Value = DateTime.Today;
             List<TextBox> tmp = new List<TextBox>();
-            tmp.Add(txtCMND); tmp.Add(txtHo); tmp.Add(txtNgheNghiep); tmp.Add(txtQueQuan); tmp.Add(txtTen); tmp.Add(txtTienDatCoc);
+            tmp.Add(txtCMND); tmp.Add(txtHo); tmp.Add(txtNgheNghiep); tmp.Add(txtQueQuan); tmp.Add(txtTienDatCoc);
             foreach (TextBox txtbox in tmp)
             {
                 txtbox.Text = "";
@@ -218,19 +201,18 @@ namespace QuanLyNhaTro.FrmMain
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
             ListViewItem item = listKDK.SelectedItems[0];
-            string id = item.Text;            
+            string id =madon= item.Text;
             var khachdk = bLTTDkiPhong.LayThongTinQuaID(Convert.ToInt32(id));
 
-            txtHo.Text = khachdk.Rows[0][1].ToString();
-            txtTen.Text = khachdk.Rows[0][2].ToString();
+            txtHo.Text = khachdk.Rows[0][2].ToString();
             cbGioiTinh.Text = khachdk.Rows[0][3].ToString();
             dtpNgaySinh.Text = khachdk.Rows[0][4].ToString();
             txtCMND.Text = khachdk.Rows[0][5].ToString();
             txtQueQuan.Text = khachdk.Rows[0][6].ToString();
             txtNgheNghiep.Text = khachdk.Rows[0][7].ToString();
 
-            string maloaiphong = khachdk.Rows[0][9].ToString();
-            var tenphong = bLTTDkiPhong.LayTenLoaiPhong( maloaiphong );
+            string maphong = khachdk.Rows[0][1].ToString();
+            var tenphong = bLTTDkiPhong.LayTenLoaiPhong( maphong );
             lblKhachChon.Text = tenphong.Rows[0][0].ToString();
         }
 
@@ -254,6 +236,11 @@ namespace QuanLyNhaTro.FrmMain
             }
             else
                 groupBox1.Enabled = false;
+        }
+
+        private void listKDK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

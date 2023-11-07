@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 using QuanLyNhaTro.BS_layer;
+using DevComponents.DotNetBar;
 
 namespace QuanLyNhaTro.DB_layer
 {
     class DBMain
     {
-        string ConnStr = "Data Source=DESKTOP-F3GD5US\\MAYAOTHIEN;Initial Catalog=QLNT;Integrated Security=True";
+        string ConnStr = "Data Source=PHAMTHANH\\PHAMTHANH;Initial Catalog=QLKhuTro;Integrated Security=True";
         public SqlConnection conn = null;
         public SqlCommand comm = null;
         public SqlDataAdapter da = null;
@@ -35,7 +36,7 @@ namespace QuanLyNhaTro.DB_layer
         }
 
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
-        {   
+        {
             bool f = false;
             if (conn.State == ConnectionState.Open)
                 conn.Close();
@@ -44,6 +45,7 @@ namespace QuanLyNhaTro.DB_layer
             comm.CommandType = ct;
             try
             {
+
                 comm.ExecuteNonQuery();
                 f = true;
             }
@@ -57,8 +59,6 @@ namespace QuanLyNhaTro.DB_layer
             }
             return f;
         }
-
-        
 
     }
 }

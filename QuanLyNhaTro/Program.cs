@@ -17,7 +17,7 @@ namespace QuanLyNhaTro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_MyApp());
+            Application.Run(new frm_Khach());
         }
     }
 }

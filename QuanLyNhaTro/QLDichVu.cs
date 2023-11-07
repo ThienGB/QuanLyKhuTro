@@ -109,7 +109,6 @@ namespace QuanLyNhaTro
                    
                     int id = int.Parse(this.txtID.Text);
                     long gia = long.Parse(this.txtDG.Text);
-                    dbDV.ThemDichVu(id, this.txtTDV.Text, gia);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -153,6 +152,11 @@ namespace QuanLyNhaTro
             {
                 MessageBox.Show("Không xóa được. Lỗi rồi!");
             }
+        }
+
+        private void dgvQLDV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -43,7 +43,6 @@
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTen = new System.Windows.Forms.TextBox();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.cbKhuVuc = new System.Windows.Forms.ComboBox();
             this.rdnTuNhap = new System.Windows.Forms.RadioButton();
             this.radDSDK = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -106,7 +106,6 @@
             this.groupBox1.Controls.Add(this.txtQueQuan);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtHo);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label2);
@@ -243,16 +242,6 @@
             this.label3.TabIndex = 69;
             this.label3.Text = "CMND:";
             // 
-            // txtTen
-            // 
-            this.txtTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.ForeColor = System.Drawing.Color.Black;
-            this.txtTen.Location = new System.Drawing.Point(373, 52);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(125, 27);
-            this.txtTen.TabIndex = 67;
-            // 
             // txtHo
             // 
             this.txtHo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,6 +307,7 @@
             this.listKDK.TabIndex = 1;
             this.listKDK.UseCompatibleStateImageBehavior = false;
             this.listKDK.View = System.Windows.Forms.View.Details;
+            this.listKDK.SelectedIndexChanged += new System.EventHandler(this.listKDK_SelectedIndexChanged);
             this.listKDK.Click += new System.EventHandler(this.listKDK_Click);
             // 
             // columnHeader1
@@ -607,12 +597,23 @@
             this.radDSDK.UseVisualStyleBackColor = true;
             this.radDSDK.CheckedChanged += new System.EventHandler(this.radDSDK_CheckedChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(330, 93);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 27);
+            this.textBox1.TabIndex = 68;
+            // 
             // ChoThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.Controls.Add(this.rdnTuNhap);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.radDSDK);
             this.Controls.Add(this.cbKhuVuc);
             this.Controls.Add(this.button2);
@@ -653,7 +654,6 @@
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.TextBox txtHo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label2;
@@ -686,5 +686,6 @@
         private System.Windows.Forms.ColumnHeader tenphonga;
         private System.Windows.Forms.ImageList phongimglist;
         private System.Windows.Forms.ImageList TwImgList;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -116,9 +116,9 @@ namespace QuanLyNhaTro
             {
                 try
                 {
-                    float DienTich = float.Parse(this.txtDT.Text);
-                    float Gia = float.Parse(this.txtGia.Text);
-                    dbLP.ThemLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia, this.txtGhiChu.Text);
+                    int DienTich = int.Parse(this.txtDT.Text);
+                    int Gia = int.Parse(this.txtGia.Text);
+                    dbLP.ThemLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -129,9 +129,9 @@ namespace QuanLyNhaTro
             }
             else
             {
-                float DienTich = float.Parse(this.txtDT.Text);
-                float Gia = float.Parse(this.txtGia.Text); ;
-                dbLP.CapNhatLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia, this.txtGhiChu.Text);
+                int  DienTich = int.Parse(this.txtDT.Text);
+                int Gia = int.Parse(this.txtGia.Text); ;
+                dbLP.CapNhatLoaiPhong(this.txtMLP.Text, this.txtTLP.Text, DienTich, Gia);
                 LoadData();
                 MessageBox.Show("Đã thêm xong!");
             }

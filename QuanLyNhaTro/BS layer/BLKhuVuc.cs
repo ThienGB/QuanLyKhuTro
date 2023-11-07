@@ -19,15 +19,18 @@ namespace QuanLyNhaTro.BS_layer
             db = new DBMain();
         }
 
+        //Dùng 
         public DataTable LayKhuVuc()
         {
-            return db.ExecuteQueryDataSet("SELECT MaKhuVuc, TenKhuVuc FROM KhuVuc", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT MaKhuTro, TenKhuTro FROM KHU_TRO", CommandType.Text);
         }
 
         public bool ThemKhuVuc(string MaKV, string TenKhuVuc)
         {
-            string sqlString = "insert into KhuVuc (MaKhuVuc, TenKhuVuc) values(" + "'" + MaKV + "',N'" + TenKhuVuc + "')";
+            string sqlString = "insert into KhuVuc (MaKhuTro, TenKhutro) values(" + "'" + MaKV + "',N'" + TenKhuVuc + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
+
     }
 }

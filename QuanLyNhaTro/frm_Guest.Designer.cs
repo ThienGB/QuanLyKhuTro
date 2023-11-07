@@ -39,7 +39,6 @@
             this.txtHo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,6 +72,10 @@
             this.thongKe = new QuanLyNhaTro.ThongKe();
             this.thongTinKhachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thongTinKhachTableAdapter = new QuanLyNhaTro.ThongKeTableAdapters.ThongTinKhachTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_Gia = new System.Windows.Forms.ComboBox();
+            this.cb_DienTich = new System.Windows.Forms.ComboBox();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,7 +87,7 @@
             // 
             this.dtiNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtiNgaySinh.Location = new System.Drawing.Point(197, 142);
-            this.dtiNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtiNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtiNgaySinh.Name = "dtiNgaySinh";
             this.dtiNgaySinh.Size = new System.Drawing.Size(265, 38);
             this.dtiNgaySinh.TabIndex = 29;
@@ -167,16 +170,6 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Nghề nghiệp";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(64, 60);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 25);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Khu vực : ";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -221,7 +214,7 @@
             // 
             this.cbKhuVuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKhuVuc.FormattingEnabled = true;
-            this.cbKhuVuc.Location = new System.Drawing.Point(195, 54);
+            this.cbKhuVuc.Location = new System.Drawing.Point(455, 63);
             this.cbKhuVuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbKhuVuc.Name = "cbKhuVuc";
             this.cbKhuVuc.Size = new System.Drawing.Size(247, 37);
@@ -231,10 +224,12 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox2.Controls.Add(this.cb_DienTich);
+            this.groupBox2.Controls.Add(this.cb_Gia);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.lstLoaiPhong);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.cbKhuVuc);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(595, 78);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,12 +246,13 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader8,
+            this.columnHeader9});
             this.lstLoaiPhong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLoaiPhong.FullRowSelect = true;
             this.lstLoaiPhong.HideSelection = false;
-            this.lstLoaiPhong.Location = new System.Drawing.Point(21, 142);
-            this.lstLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstLoaiPhong.Location = new System.Drawing.Point(37, 203);
+            this.lstLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.lstLoaiPhong.MultiSelect = false;
             this.lstLoaiPhong.Name = "lstLoaiPhong";
             this.lstLoaiPhong.Size = new System.Drawing.Size(611, 362);
@@ -267,23 +263,23 @@
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Mã";
-            this.columnHeader5.Width = 96;
+            this.columnHeader5.Text = "Mã phòng";
+            this.columnHeader5.Width = 112;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Loại phòng";
-            this.columnHeader6.Width = 158;
+            this.columnHeader6.Text = "Loại  phòng";
+            this.columnHeader6.Width = 109;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Diện tích";
-            this.columnHeader7.Width = 135;
+            this.columnHeader7.Width = 127;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Đơn giá";
-            this.columnHeader8.Width = 187;
+            this.columnHeader8.Width = 116;
             // 
             // groupBox3
             // 
@@ -296,7 +292,7 @@
             this.groupBox3.Controls.Add(this.lblLoai);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.lblKhuvuc);
-            this.groupBox3.Location = new System.Drawing.Point(655, 137);
+            this.groupBox3.Location = new System.Drawing.Point(673, 203);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -512,6 +508,49 @@
             // 
             this.thongTinKhachTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Giá",
+            "Khu Trọ ",
+            "Diện tích "});
+            this.comboBox1.Location = new System.Drawing.Point(88, 63);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(247, 37);
+            this.comboBox1.TabIndex = 23;
+            this.comboBox1.Text = "Chọn cách lọc ";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // cb_Gia
+            // 
+            this.cb_Gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Gia.FormattingEnabled = true;
+            this.cb_Gia.Location = new System.Drawing.Point(455, 63);
+            this.cb_Gia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_Gia.Name = "cb_Gia";
+            this.cb_Gia.Size = new System.Drawing.Size(247, 37);
+            this.cb_Gia.TabIndex = 24;
+            this.cb_Gia.SelectedIndexChanged += new System.EventHandler(this.cb_Gia_SelectedIndexChanged);
+            // 
+            // cb_DienTich
+            // 
+            this.cb_DienTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_DienTich.FormattingEnabled = true;
+            this.cb_DienTich.Location = new System.Drawing.Point(455, 63);
+            this.cb_DienTich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_DienTich.Name = "cb_DienTich";
+            this.cb_DienTich.Size = new System.Drawing.Size(247, 37);
+            this.cb_DienTich.TabIndex = 25;
+            this.cb_DienTich.SelectedIndexChanged += new System.EventHandler(this.cb_DienTich_SelectedIndexChanged);
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Khu trọ";
+            this.columnHeader9.Width = 121;
+            // 
             // frm_Guest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -533,7 +572,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDKPhong_FormClosing);
             this.Load += new System.EventHandler(this.frmDKPhong_Load);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -555,7 +593,6 @@
         private System.Windows.Forms.TextBox txtHo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -589,5 +626,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblGia;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_DienTich;
+        private System.Windows.Forms.ComboBox cb_Gia;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
