@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QuanLyNhaTro
 {
-    public partial class QLDichVu : Form
+    public partial class QLDichVu : UserControl
     {
         bool Them;
         BLDichVu dbDV = new BLDichVu();

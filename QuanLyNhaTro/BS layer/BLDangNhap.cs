@@ -70,26 +70,6 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("select id, password from GhiNho", CommandType.Text);
         }
-        
-        public bool LuuTaiKhoan(string id, string pass)
-        {
-            this.Del();
-            string sqlString = "insert into GhiNho (id, password) values (" + "'" + id + "',N'" + pass + "')";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-
-        public bool Del()
-        {
-            DataTable dt = this.LayGhiNho();
-            if (dt.Rows.Count > 0)
-            {
-                string Id = dt.Rows[0][0].ToString();
-                string sqlString = "delete from GhiNho where id =N'" + Id + "'";
-               
-                return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-            }
-            return false;
-        }
 
         public bool DoiMatKhau(string TK, string passOLD, string pasNEW,out string err)
         {

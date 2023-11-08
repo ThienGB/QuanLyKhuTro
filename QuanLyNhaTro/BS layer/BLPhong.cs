@@ -66,16 +66,16 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayPhongDaThue_MaKV_LP(string makv, string loaiphong)
         {
-            string sql = "Select * from Phong " +
-                "where MaKhuVuc = N'" + makv + "' and TrangThai = N'Đã thuê' and  MaLoaiPhong =N'"+loaiphong+"'";
+            string sql = "Select * from PHONG_TRO " +
+                "where MaKhuTro = N'" + makv + "' and TrangThai = N'Đã thuê' and  MaLP =N'"+loaiphong+"'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
         }
 
         public DataTable LayPhongDaThue_MaKV_TenP(string makv, string tenphong)
         {
-            string sql = "Select * from Phong "+
-                "where MaKhuVuc = N'" + makv + "' and TrangThai = N'Đã thuê' and  TenPhong =N'" + tenphong + "'";
+            string sql = "Select * from PHONG_TRO "+
+                "where MaKhuTro = N'" + makv + "' and TrangThai = N'Đã thuê' and  TenPhong =N'" + tenphong + "'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
            
         }
@@ -83,8 +83,8 @@ namespace QuanLyNhaTro.BS_layer
         public DataTable LayPhongDaThue_MaKV(string makv)
         {
 
-            string sql = "select Maphong,TenPhong,MaLoaiPhong,Day from Phong " +
-                "where MaKhuVuc = N'" + makv + "' and TrangThai = N'Đã thuê'";
+            string sql = "select Maphong,TenPhong,MaLP from PHONG_TRO " +
+                "where MaKhuTro = N'" + makv + "' and TrangThai = N'Đã thuê'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
             
         }
@@ -190,7 +190,7 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayPhongtrong_dientich(string dientich)
         {
-            string sql = "select * from  LocPhongTheoGia(" + dientich + ")";
+            string sql = "select * from   LocPhongTheoDienTich(" + dientich + ")";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
     }

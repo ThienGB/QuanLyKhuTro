@@ -23,6 +23,10 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("select MaLP, TenLoaiPhong from viewThongTinLoaiPhong ", CommandType.Text);
         }
+        public DataTable LayLoaiPhong1()
+        {
+            return db.ExecuteQueryDataSet("select * from viewThongTinLoaiPhong ", CommandType.Text);
+        }
 
         public bool ThemLoaiPhong(string MaLoaiPhong, string TenLoaiPhong, float DienTich, float DonGia, string GhiChu)
         {

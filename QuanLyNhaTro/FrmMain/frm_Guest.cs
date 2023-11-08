@@ -120,8 +120,9 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btnDsThuTien_Click(object sender, EventArgs e)
         {
-            Dsthutien dt = new Dsthutien();
-            addNewTab("Danh sách thu tiền", dt, 10);
+            string maPhong = bLPhong.LayMaPhongBangMaKT(MaKT);
+            DichVuGuest dt = new DichVuGuest(maPhong);
+            addNewTab("Dịch vụ", dt, 10);
         }
 
         private void btnChoThue_Click(object sender, EventArgs e)
@@ -168,14 +169,12 @@ namespace QuanLyNhaTro.FrmMain
 
         private void btn_QLyDV_Click(object sender, EventArgs e)
         {
-            QLDichVu qLDichVu = new QLDichVu();
-            qLDichVu.ShowDialog();
+
         }
 
         private void btn_QLyLPhong_Click(object sender, EventArgs e)
         {
-            QLLoaiPhong qLLoaiPhong = new QLLoaiPhong();
-            qLLoaiPhong.ShowDialog();
+
         }
 
         private void btn_ttTK_Click(object sender, EventArgs e)

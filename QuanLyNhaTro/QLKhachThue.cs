@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaTro
 {
-    public partial class QLKhachThue : Form
+    public partial class QLKhachThue : UserControl
     {
         bool Them;
         BLTTKhach bLTTKhach = new BLTTKhach();

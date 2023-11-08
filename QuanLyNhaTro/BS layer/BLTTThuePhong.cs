@@ -19,7 +19,7 @@ namespace QuanLyNhaTro.BS_layer
 
         public DataTable LayThongTinThue()
         {
-            return db.ExecuteQueryDataSet("SELECT * FROM ThongTinThuePhong", CommandType.Text);
+            return db.ExecuteQueryDataSet("SELECT * FROM HOP_DONG", CommandType.Text);
         }
 
         public int LayIDMoi()
@@ -37,14 +37,14 @@ namespace QuanLyNhaTro.BS_layer
 
         public bool ThemThongTinThue(string idtttp, string makhach, string maphong, DateTime ngaythue, long tiendatcoc)
         {
-            string sqlString = "INSERT INTO ThongTinThuePhong VALUES ('" + idtttp + "', '" + makhach + "', '" +
+            string sqlString = "INSERT INTO HOP_DONG VALUES ('" + idtttp + "', '" + makhach + "', '" +
                 maphong + "', '" + ngaythue + "', '" + tiendatcoc + "', 'null'" + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
         public bool TraPhong(string maphong)
         {
-            string sqlString = "DELETE FROM ThongTinThuePhong WHERE MaPhong = '" + maphong + "'";
+            string sqlString = "DELETE FROM HOP_DONG WHERE MaPhong = '" + maphong + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //Dùng 
