@@ -15,7 +15,6 @@ namespace QuanLyNhaTro
     public partial class frm_LoginGuest : Form
     {
         BLDangNhap bLLogin = new BLDangNhap();
-
         string err;
         public frm_LoginGuest()
         {
@@ -23,17 +22,22 @@ namespace QuanLyNhaTro
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool login = bLLogin.DangNhapKhachThue(this.txtUsername.Text, this.txtPassword.Text);
-            if (login)
+            Global.username = this.txtUsername.Text;
+            Global.password = this.txtPassword.Text;
+            
+            try
             {
+                bool login = bLLogin.DangNhapKhachThue(this.txtUsername.Text, this.txtPassword.Text);
                 this.Hide();
                 string MaKT = bLLogin.LayMaKT(this.txtUsername.Text);
                 frm_Guest frm_guest = new frm_Guest(this.txtUsername.Text, MaKT);
                 frm_guest.ShowDialog();
                 this.Close();
             }
-            else
+            catch
+            {
                 MessageBox.Show("Ten dang nhap hoac mat khau sai !!", "EROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frm_Login_Load(object sender, EventArgs e)

@@ -188,6 +188,11 @@ namespace QuanLyNhaTro.FrmMain
             var phongdathue = bLPhong.Layphong_TT_MaKV("Đã thuê", makv);
             numTrong.Text = phongtrong.Rows.Count.ToString();
             numRent.Text = phongdathue.Rows.Count.ToString();
+
+            BLTTKhach bLttk= new BLTTKhach();
+            var SLKhach = bLttk.demSoLuongKhach();
+
+            numGuest.Text = SLKhach.Rows[0]["SoLuongKhach"].ToString();
         }
         public void Load_CB_KV()
         {
@@ -218,13 +223,13 @@ namespace QuanLyNhaTro.FrmMain
         private void btn_QLyDV_Click(object sender, EventArgs e)
         {
             QLDichVu qLDichVu = new QLDichVu();
-            addNewTab("Thông tin dịch vụ", qLDichVu, 0);
+            qLDichVu.ShowDialog();
         }
 
         private void btn_QLyLPhong_Click(object sender, EventArgs e)
         {
             QLLoaiPhong qLLoaiPhong = new QLLoaiPhong();
-            addNewTab("Loại phòng", qLLoaiPhong, 0);
+            qLLoaiPhong.ShowDialog();
         }
 
         private void btn_ttTK_Click(object sender, EventArgs e)
@@ -278,19 +283,7 @@ namespace QuanLyNhaTro.FrmMain
         private void btn_DsPhong_Click(object sender, EventArgs e)
         {
             DoanhThuNam dtn = new DoanhThuNam();
-            addNewTab("Doanh thu năm", dtn, 11);  
-        }
-
-        private void buttonItem10_Click(object sender, EventArgs e)
-        {
-            QLKhachThue qlkt = new QLKhachThue();
-            addNewTab("Khách thuê", qlkt, 11);
-        }
-
-        private void buttonItem11_Click(object sender, EventArgs e)
-        {
-            QLPhongTro qlkt = new QLPhongTro();
-            addNewTab("Phòng trọ", qlkt, 11);
+            addNewTab("Doanh thu năm ", dtn, 11);
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

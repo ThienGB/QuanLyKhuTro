@@ -13,17 +13,22 @@ namespace QuanLyNhaTro.DB_layer
 {
     class DBMain
     {
-        string ConnStr = "Data Source=DESKTOP-F3GD5US\\MAYAOTHIEN;Initial Catalog=QLKhuTro;Integrated Security=True";
+       
+      //  string ConnStr = "Data Source=DESKTOP-F3GD5US\\MAYAOTHIEN;Initial Catalog=QLKhuTro;Integrated Security=True";
+        
         public SqlConnection conn = null;
         public SqlCommand comm = null;
         public SqlDataAdapter da = null;
         public DBMain()
         {
-            conn = new SqlConnection(ConnStr);
-            comm = conn.CreateCommand();
+            
         }
         public DataTable ExecuteQueryDataSet(string strSQL, CommandType ct)
         {
+
+            string ConnStr = @"Data Source=192.168.0.107;Initial Catalog=QLKhuTro;User Id=" + Global.username + ";Password=" + Global.password + ";";
+            conn = new SqlConnection(ConnStr);
+            comm = conn.CreateCommand();
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             conn.Open();
@@ -34,16 +39,13 @@ namespace QuanLyNhaTro.DB_layer
             da.Fill(ds);
             return ds;
         }
-        public SqlConnection getConnection
-        {
-            get
-            {
-                return conn;
-            }
-        }
+        
 
         public bool MyExecuteNonQuery(string strSQL, CommandType ct, ref string error)
-        {   
+        {
+            string ConnStr = @"Data Source=192.168.0.107;Initial Catalog=QLKhuTro;User Id=" + Global.username + ";Password=" + Global.password + ";";
+            conn = new SqlConnection(ConnStr);
+            comm = conn.CreateCommand();
             bool f = false;
             if (conn.State == ConnectionState.Open)
                 conn.Close();
@@ -72,8 +74,6 @@ namespace QuanLyNhaTro.DB_layer
             }
             return f;
         }
-
-        
 
     }
 }

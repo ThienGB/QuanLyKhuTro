@@ -1118,3 +1118,245 @@ C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Doa
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuThang.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.KhuVuc.resources
 C:\Users\Hp\Downloads\test2\QuanLyKhuTro\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThongTinPhongMinh.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.exe.config
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.exe
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.pdb
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EnvDTE.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\stdole.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.AssemblyReference.cache
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.AccountInformation.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.ChoThue.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DichVuGuest.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuNam.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuThang.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.Dsthutien.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmHopDong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmSuDungDichVu.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmThayDoiMK_Khach.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmTraPhong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_DangKyPhong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_LoginGuest.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_XemTienPhong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.KhuVuc.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLKhachThue.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLPhongTro.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Guest.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmChangePass.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\MotelRoomManagement.frm_Information.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Admin.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_TKNgThue.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_Login.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_MyApp.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Properties.Resources.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLDichVu.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLLoaiPhong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TaoPhieuChi.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemNguoi.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemPhong.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemTK.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThongTinPhongMinh.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TinhTien.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TrangThai.resources
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.GenerateResource.cache
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.CopyComplete
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.exe
+C:\Users\DELL\Downloads\QuanLyKhuTro-main (2)\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.pdb
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.exe.config
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.exe
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\QuanLyNhaTro.pdb
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EnvDTE.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\stdole.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.xml
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.AssemblyReference.cache
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.AccountInformation.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.ChoThue.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DichVuGuest.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuNam.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.DoanhThuThang.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.Dsthutien.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmHopDong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmSuDungDichVu.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmThayDoiMK_Khach.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmTraPhong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_DangKyPhong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_LoginGuest.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_XemTienPhong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.KhuVuc.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLKhachThue.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLPhongTro.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Guest.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frmChangePass.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\MotelRoomManagement.frm_Information.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.FrmMain.frm_Admin.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_TKNgThue.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_Login.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.frm_MyApp.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.Properties.Resources.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLDichVu.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.QLLoaiPhong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TaoPhieuChi.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemNguoi.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemPhong.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThemTK.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.ThongTinPhongMinh.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TinhTien.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.TrangThai.resources
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.GenerateResource.cache
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.csproj.CopyComplete
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.exe
+C:\Users\Hp\Downloads\QuanLyKhuTro-main\QuanLyKhuTro-main\QuanLyNhaTro\obj\Debug\QuanLyNhaTro.pdb

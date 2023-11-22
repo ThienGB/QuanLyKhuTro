@@ -105,6 +105,7 @@
     <Compile Include="BS layer\BLTTDkiPhong.cs" />
     <Compile Include="BS layer\BLTTKhach.cs" />
     <Compile Include="BS layer\BLTTThuePhong.cs" />
+    <Compile Include="BS layer\Global.cs" />
     <Compile Include="ChoThue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,13 +186,13 @@
       <DependentUpon>KhuTro.cs</DependentUpon>
     </Compile>
     <Compile Include="QLKhachThue.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLKhachThue.designer.cs">
       <DependentUpon>QLKhachThue.cs</DependentUpon>
     </Compile>
     <Compile Include="QLPhongTro.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLPhongTro.designer.cs">
       <DependentUpon>QLPhongTro.cs</DependentUpon>
@@ -241,13 +242,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDichVu.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLDichVu.designer.cs">
       <DependentUpon>QLDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="QLLoaiPhong.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLLoaiPhong.designer.cs">
       <DependentUpon>QLLoaiPhong.cs</DependentUpon>

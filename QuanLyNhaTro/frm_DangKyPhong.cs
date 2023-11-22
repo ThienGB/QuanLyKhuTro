@@ -135,7 +135,6 @@ namespace QuanLyNhaTro
                 //maloaiphong = lstLoaiPhong.SelectedItems[0].Text;
                 List<string> lc = new List<string>();
                 lc.Add(ho); lc.Add(ten); lc.Add(cmnd); lc.Add(lblKhuvuc.Text); lc.Add(lblLoai.Text); lc.Add(quequan);
-                lc.Add(nghenghiep); lc.Add(ngaysinh.ToString()); lc.Add(cbKhuVuc.SelectedItem.ToString());
                 foreach (string c in lc)
                 {
                     if (c == "")

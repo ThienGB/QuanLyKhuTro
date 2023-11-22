@@ -76,9 +76,12 @@ namespace QuanLyNhaTro
         {
             try
             {
+                int Soluong = 1;
                 int current = dgvDV.CurrentCell.RowIndex;
                 string MaDV = dgvDV.Rows[current].Cells[0].Value.ToString();
-                int Soluong = int.Parse(this.tbSoLuong.Text);               
+                if (this.tbSoLuong.Text == "")
+                    Soluong = 1;
+                else Soluong = int.Parse(this.tbSoLuong.Text);               
                 dbDV.ThemDichVuSuDung(MaPhong,MaDV,Soluong);
                 LoadData();
                 MessageBox.Show("Đã thêm xong!");

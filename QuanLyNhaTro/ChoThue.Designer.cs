@@ -366,10 +366,12 @@
             // maphonga
             // 
             this.maphonga.Text = "Mã phòng";
+            this.maphonga.Width = 132;
             // 
             // tenphonga
             // 
             this.tenphonga.Text = "Tên phòng";
+            this.tenphonga.Width = 124;
             // 
             // phongimglist
             // 
@@ -396,9 +398,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(22, 39);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 25);
+            this.label7.Size = new System.Drawing.Size(181, 25);
             this.label7.TabIndex = 65;
-            this.label7.Text = "Loai phòng khách chọn:";
+            this.label7.Text = "Phòng khách chọn:";
             // 
             // label4
             // 

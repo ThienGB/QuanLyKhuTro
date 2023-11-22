@@ -135,7 +135,7 @@ namespace QuanLyNhaTro
             ngaytra = dtpNgayTra.Value;
             string maKhach = lblMaKhach.Text;
             string str_tdc = string.Format("{0:#,##0}", tiendatcoc);
-            int tdc = int.Parse(txtTienCoc.Text);
+            string  tdc = txtTienCoc.Text;
 
             if (MessageBox.Show("Ngày thuê: " + dtpNgayThue.Text.ToString() + "\nTiền đặt cọc: " + str_tdc + " vnd", "Xác nhận trả phòng: " + maphong, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

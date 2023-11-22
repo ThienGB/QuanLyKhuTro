@@ -100,9 +100,9 @@ namespace QuanLyNhaTro.FrmMain
         {
             string kv = cbKhuVuc.SelectedValue.ToString();
             string tp = lvPhong.SelectedItems[0].Text;
-            var mp = bLPhong.LayPhongtrong_MaKV_TenP(kv,tp);
+            var mp = bLPhong.LayPhongtrong_MaKV_TenP(kv, tp);
 
-            
+
             string maphong = mp.Rows[0][0].ToString();
             var dsphong = bLPhong.LayPhong_MaP(maphong);
             string tenphong = dsphong.Rows[0][0].ToString();
@@ -110,6 +110,7 @@ namespace QuanLyNhaTro.FrmMain
             lblMaphong.Text = maphong; lblMaphong.ForeColor = Color.Red;
             lblTenPhong.Text = tenphong; lblTenPhong.ForeColor = Color.Red;
             lblGia.Text = gia + " vnd"; lblGia.ForeColor = Color.Red;
+            txtTienDatCoc.Text = gia + " VNĐ";
         }
 
 
@@ -164,7 +165,7 @@ namespace QuanLyNhaTro.FrmMain
                             lvPhong.Items.Clear();
                             LoadData_ListPhong();
                             Load_ListKDK();
-                            MessageBox.Show("Đã thêm thành công!       Tài khoản: "+cmnd+ "     Mật khẩu: "+ maphong);
+                            MessageBox.Show("Đã thêm thành công!       Tài khoản: "+cmnd+ "     Mật khẩu: "+ lblKhachChon.Text);
                         }
                         
 
@@ -198,10 +199,12 @@ namespace QuanLyNhaTro.FrmMain
 
         private void listKDK_Click(object sender, EventArgs e)
         {
+            string kv = cbKhuVuc.SelectedValue.ToString();
+
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
             ListViewItem item = listKDK.SelectedItems[0];
-            string id =madon= item.Text;
+            string id = madon = item.Text;
             var khachdk = bLTTDkiPhong.LayThongTinQuaID(Convert.ToInt32(id));
 
             txtHo.Text = khachdk.Rows[0][2].ToString();
@@ -212,8 +215,11 @@ namespace QuanLyNhaTro.FrmMain
             txtNgheNghiep.Text = khachdk.Rows[0][7].ToString();
 
             string maphong = khachdk.Rows[0][1].ToString();
-            var tenphong = bLTTDkiPhong.LayTenLoaiPhong( maphong );
+            var tenphong = bLTTDkiPhong.LayTenLoaiPhong(maphong);
             lblKhachChon.Text = tenphong.Rows[0][0].ToString();
+            var dsphong = bLPhong.LayPhong_MaP(maphong);
+            string gia = string.Format("{0:#,##0}", Int32.Parse(dsphong.Rows[0][3].ToString()));
+            txtTienDatCoc.Text = gia + " VNĐ";
         }
 
         private void radDSDK_CheckedChanged(object sender, EventArgs e)

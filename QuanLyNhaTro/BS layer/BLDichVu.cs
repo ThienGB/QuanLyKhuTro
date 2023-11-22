@@ -19,6 +19,8 @@ namespace QuanLyNhaTro.BS_layer
             db = new DBMain();
         }
 
+
+
         public bool ThemDichVu(int ID, string TenDichVu, long Gia)
         {
             string sqlString = "Insert Into DichVu Values(" +

@@ -21,5 +21,7 @@ namespace QuanLyNhaTro.BS_layer
         {
             return db.ExecuteQueryDataSet("SELECT * FROM ViewDoanhThuThang", CommandType.Text);
         }
+
+      
     }
 }

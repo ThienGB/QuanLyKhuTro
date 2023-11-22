@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaTro
 {
-    public partial class QLPhongTro : UserControl
+    public partial class QLPhongTro : Form
     {
         bool Them;
         BLPhong dbPhong = new BLPhong();

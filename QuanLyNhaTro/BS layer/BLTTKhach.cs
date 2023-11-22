@@ -162,5 +162,10 @@ namespace QuanLyNhaTro.BS_layer
             string sqlString = "SELECT * FROM HienThiPhong_TheoPhong(" + MaPhong + ");";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
+
+        public DataTable demSoLuongKhach ()
+        {
+            return db.ExecuteQueryDataSet("SELECT dbo.LaySoLuongKhach() AS SoLuongKhach", CommandType.Text);
+        }
     }
 }

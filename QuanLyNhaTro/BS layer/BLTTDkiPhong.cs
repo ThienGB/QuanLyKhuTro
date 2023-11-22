@@ -41,12 +41,6 @@ namespace QuanLyNhaTro.BS_layer
             return db.MyExecuteNonQuery(db.comm.CommandText, CommandType.Text, ref err);
         }
 
-        public bool Xoa(int id)
-        {
-            string sqlString = "DELETE FROM ThongTinDangKyPhong WHERE Id = '" + id + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-
         //Dùng 
         public DataTable LayTenLoaiPhong(string MaPhong)
         {

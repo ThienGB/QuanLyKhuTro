@@ -24,16 +24,19 @@ namespace QuanLyNhaTro
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool login = bLLogin.DangNhap(this.txtUsername.Text, this.txtPassword.Text);
-            if (login)
-            {
-
+            Global.username = this.txtUsername.Text;
+            Global.password = this.txtPassword.Text;
+            
+            try {
+                bool login = bLLogin.DangNhap(this.txtUsername.Text, this.txtPassword.Text);
                 frm_Admin frm_Admin = new frm_Admin(this.txtUsername.Text, this.txtPassword.Text);
                 frm_Admin.ShowDialog();
                 this.Close();
             }
-            else
+            catch
+            {
                 MessageBox.Show("Ten dang nhap hoac mat khau sai !!", "EROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frm_Login_Load(object sender, EventArgs e)

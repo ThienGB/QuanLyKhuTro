@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaTro
 {
-    public partial class QLLoaiPhong : UserControl
+    public partial class QLLoaiPhong : Form
     {
         bool Them;
         BLLoaiPhong dbLP = new BLLoaiPhong();
@@ -24,7 +24,7 @@ namespace QuanLyNhaTro
         {
             try
             {
-                dgvQLLP.DataSource = dbLP.LayLoaiPhong1();
+                dgvQLLP.DataSource = dbLP.LayLoaiPhong();
                 dgvQLLP.AutoResizeColumns();
                 this.txtMLP.ResetText();
                 this.txtTLP.ResetText();
@@ -90,7 +90,6 @@ namespace QuanLyNhaTro
             this.txtTLP.Text = dgvQLLP.Rows[current].Cells[1].Value.ToString();
             this.txtDT.Text = dgvQLLP.Rows[current].Cells[2].Value.ToString();
             this.txtGia.Text = dgvQLLP.Rows[current].Cells[3].Value.ToString();
-            this.txtGhiChu.Text = dgvQLLP.Rows[current].Cells[4].Value.ToString();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

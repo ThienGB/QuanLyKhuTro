@@ -1,4 +1,5 @@
-﻿using QuanLyNhaTro.FrmMain;
+﻿using QuanLyNhaTro.BS_layer;
+using QuanLyNhaTro.FrmMain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,8 @@ namespace QuanLyNhaTro
 
         private void btn_guest_Click(object sender, EventArgs e)
         {
+            Global.username = "admin";
+            Global.password = "admin";
             this.Hide();
             frm_DangKyPhong frm_guest = new frm_DangKyPhong();
             frm_guest.ShowDialog();
